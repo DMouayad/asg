@@ -1,0 +1,81 @@
+{{ $data := index site.Data site.Language.Lang }}
+{{ $newsData := $data.news}}
+{{if $newsData.enable}}
+{{ $carouselId := "newsCarousel"}}
+<section class="news-section">
+    <div class="h2 text-center fw-semibold mb-5">
+        {{$newsData.sectionTitle}}
+    </div>
+    <div class="container">
+
+
+        {{$newsCount := len $newsData.items}}
+        {{$slidesCount := math.Div $newsCount 3}}
+        {{if ne (math.Mod $newsCount 3) 0}}
+        {{$slidesCount = math.Sum 1 $slidesCount }}
+        {{end}}
+        <div id="{{$carouselId}}" data-bs-theme="dark" class="carousel d-none d-lg-block " data-bs-interval="1000"
+            data-bs-ride="false">
+            {{if gt $slidesCount 1}}
+            <div class="carousel-indicators d-none d-md-flex">
+                {{range seq $slidesCount}}
+                <button type="button" data-bs-target="#{{$carouselId}}" data-bs-slide-to="{{math.Add . -1}}" {{if eq .
+                    1}} class="active" aria-current="true" {{end}} aria-label="Slide {{.}}"></button>
+                {{end}}
+            </div>
+            {{end}}
+
+            <div class="carousel-inner ">
+                {{range seq $slidesCount}}
+                {{$items := ""}}
+                {{if eq . 1}}
+                {{$items = first 3 $newsData.items}}
+                {{else}}
+                {{$items = first 3 (after (math.Product 3 (math.Sub . 1)) $newsData.items)}}
+                {{end}}
+                <div class=" carousel-item {{if eq . 1}} active {{end}}">
+                    <div
+                        class="d-flex flex-row flex-wrap {{if gt (len $items) 2 }} justify-content-around {{else}} justify-content-center {{end}} my-4">
+                        {{ range $index, $el := $items }}
+
+                        {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" .image "ImgParam"
+                        "webp resize x300")}}
+                        <div animate-data="fadeInLeft" style=" --delay:{{$index}};"
+                            class="repeat-animation {{if not (gt (len $items) 2) }} mx-5 {{end}} news-card">
+                            <div class="news-card-img" data-background-image="{{$imgWebp}}">
+
+                            </div>
+                            <div class=" content">
+                                <div class="title h6">{{.title}}</div>
+                                <div class="secondary">{{i18n "details"}}</div>
+                                <p>{{.content}}</p>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+        <div class="d-block mobile-news-cards d-lg-none">
+            <div class="d-flex flex-row">
+
+                {{range $index, $el := $newsData.items}}
+                {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" $el.image "ImgParam"
+                "webp resize x300")}}
+                <div animate-data="fadeInLeft" class="flex-fill news-card">
+                    <div class="news-card-img" data-background-image="{{$imgWebp}}">
+                    </div>
+                    <div class=" content">
+                        <div class="title h6">{{$el.title}}</div>
+                        <div class="secondary">{{i18n "details"}}</div>
+                        <p>{{$el.content}}</p>
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </div>
+
+</section>
+{{end}}

@@ -1,0 +1,33 @@
+socials:
+  enable: true
+  items:
+  - link: https://instagram.com/
+    icon: /icons/instagram.svg
+    desc: صفحة شركة أرينا السعودية الألمانية على انستغرام
+
+  - link: https://x.com/
+    icon: /icons/x-twitter.svg
+    desc: صفحة أرينا السعودية الألمانية على منصة أكس (تويتر)
+
+ksaOffices:
+- officeName: مكتبنا الرئيسي في السعودية
+  phoneNumber: +966 112 111 640
+  address: الرياض، شارع أنس ابن مالك
+  locationOnMap: <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7242.221378143235!2d46.656014!3d24.825888!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ5JzMzLjIiTiA0NsKwMzknMzAuOSJF!5e0!3m2!1sen!2snl!4v1717420863481!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  POBox: ص.ب 395180, الرياض 11375
+  useInFooter: true
+
+germanyOffices:
+- officeName: مكتبنا الرئيسي في ألمانيا
+  phoneNumber: +49 172 918 3910
+  address:  Wilhelmstr.30, 47169 Duisburg
+  useInFooter: true
+
+contactPage:
+  image: /images/phone-2.png
+  subtitle:
+  contactForm:
+    image: /images/email.jpg
+    enable: true
+    title: تواصل معنا الآن
+    subtitle: يمكنك إرسال رسالتك بواسطة الاستمارة التالية

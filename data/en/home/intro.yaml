@@ -1,0 +1,58 @@
+items:
+  - title: "All About Construction & Concrete"
+    subtitle:
+    learnMoreLink: "services/construction"
+    sectionLink: "#contracting-services"
+    image: "/images/home-slider/construction1.jpg"
+    _template: serviceSlide
+    
+  - title: "Trading & Supply"
+    subtitle: Of Sports Stadium Supplies & Equipments
+    sectionLink: "#supply-trade-services"
+    image: "/images/home-slider/trade-supply.jpg"
+    _template: serviceSlide
+
+
+  - title: "Finishing Works"
+    subtitle: Painting Works - Gypsum Board - Floor Tiling
+    sectionLink: "#contracting-services"
+    learnMoreLink: "services/finishing-works"
+    image: "/images/home-slider/f2.jpg"
+    _template: serviceSlide
+
+  - title: "Flooring Systems"
+    subtitle: Car Parking - Industrial Floors - Self Leveling Epoxy
+    learnMoreLink: "services/flooring-systems"
+    sectionLink: "#contracting-services"
+    image: "/images/home-slider/flooring.jpg"
+    _template: serviceSlide
+
+  - title: "Riyadh Park Mall"
+    subtitle:
+    isProject: true
+    projectLink: "projects/riyadh-park-mall"
+    image: "/images/home-slider/riyadh-park-mall.jpg"
+    details:
+    - title: Construction
+      link: "services/construction"
+    - title: Finishing Works
+      link: "services/finishing-works"
+    - title: MEP Engineering
+      link: "services/mep-engineering"
+    _template: projectSlide
+
+  - title: "Saudi Journalists Association Building"
+    subtitle:
+    projectLink: "projects/saudi-journalists-association-building"
+    image: "/images/home-slider/sja.jpg"
+    isProject: true
+    details:
+    - title: MEP Engineering
+      link: "services/mep-engineering"
+    - title: Concrete Repairs & Joints
+      link: "services/concrete-joints-and-repairs"
+    - title: Insulation Works
+      link: "services/insulation-works"
+    _template: projectSlide
+
+_template: intro

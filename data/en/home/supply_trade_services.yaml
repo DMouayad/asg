@@ -1,0 +1,18 @@
+title: Supply & Trade
+description: Build with confidence. We provide high-quality materials for residential, commercial, and industrial projects.
+backgroundImage:
+subServices:
+- title: Building materials
+  icon: "/icons/con-sand-shovel.svg"
+- title: Coating materials
+  icon: "/icons/con-tin.svg"
+- title: Sealing Compounds
+  icon: "/icons/barrel.svg"
+- title: Sports Stadium Equipments
+  icon: "/icons/football-field.svg"
+- title: Gypsum & Drywall Ceiling
+  icon: "/icons/gypsumBoard.svg"
+- title: Waterproofing Systems
+  icon: "/icons/waterproof.svg"
+
+_template: supply_trade_services

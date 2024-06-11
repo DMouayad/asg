@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}"
+  class="{{if .Site.Params.isArabic}} ar-typography {{else}} en-typography {{end}}">
+
+<head> {{ partial "head.html" . }}
+  {{ partialCached "csp.html" .}}
+
+</head>
+
+<body id="top" class="body-inner">
+  {{ partialCached "preloader.html" . }}
+
+  {{ "<!-- Header -->" | safeHTML }}
+  {{ partial "navigation.html" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partialCached "footer.html" . }}
+
+  {{ "<!-- BOOTSTRAP JS Plugin -->" | safeHTML }}
+  <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=" crossorigin="anonymous"></script>
+
+  {{ "<!-- Main Script -->" | safeHTML }}
+  {{ with partialCached "func/getScriptAsset.html" "GetScriptAsset" (dict "file" "js/main.js") }}
+  <script type="text/javascript" src="{{ .Permalink }}" integrity="{{ .Data.Integrity }}"
+    crossorigin="anonymous"></script>
+  {{end}}
+</body>
+
+</html>

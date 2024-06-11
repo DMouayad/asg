@@ -1,0 +1,65 @@
+body {
+  background: $bg-color;
+  color: $on-background-color;
+  font-family: sans-serif;
+}
+
+
+body,
+p {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  line-height: 22px;
+  font-size: 15px;
+  color: $body-text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $on-background-color;
+}
+
+.ar-typography {
+  &.custom-typography body {
+    font-family: $ar-font-family !important;
+  }
+}
+
+.en-typography {
+  &.custom-typography body {
+    direction: ltr;
+    font-family: $en-font-family !important;
+    font-optical-sizing: auto;
+  }
+}
+
+.ar-typography {
+  direction: rtl;
+
+  p,
+  a,
+  body {
+    letter-spacing: normal !important;
+  }
+
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  .btn {
+    letter-spacing: normal !important;
+  }
+}

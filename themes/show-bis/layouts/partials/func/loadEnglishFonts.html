@@ -1,0 +1,3 @@
+{{ $script := resources.Get "js/loadEnglishFonts.js" | minify | fingerprint "sha256"}}
+
+{{return $script}}

@@ -1,0 +1,57 @@
+<header>
+  <nav id="navigation"
+    class="  navigation  py-md-3 navbar fixed-top navbar-expand-lg  {{if .Site.Params.isArabic}} navigation-ar {{else}} navigation-en  {{end}}">
+    <div class="container-fluid px-1">
+      <div class="flex-grow-1" id="nav-logo">
+        {{ partialCached "partials/logo.html" . }}
+      </div>
+      <div class=" d-block d-lg-none">
+        {{partial "language-switch.html" . }}
+      </div>
+      <button id="navMenuToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        {{$is_rtl := eq .Site.Params.LanguageDirection "rtl"}}
+        <div id="navbar-nav" class="navbar-nav">
+          {{ $currentPage := . }}
+          {{ range site.Menus.main }}
+          {{ $menuURL := .URL | absLangURL }}
+          {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+          {{ $active := eq $menuURL $pageURL }}
+          {{ if .HasChildren }}
+          <div id="nav-dropdown" class="nav-item nav-dropdown dropdown-closed ">
+
+            <button id="nav-dropdown-btn" class="nav-link dropdown-toggle" aria-expanded="false">{{.Name}}</button>
+            <ul>
+              {{range .Children}}
+              {{ $active := eq $pageURL (.PageRef | absLangURL) }}
+              <li class="{{if $active}} active {{end}}"><a class="dropdown-item"
+                  href="{{.PageRef | relLangURL}}">{{.Name}}</a></li>
+              {{end}}
+            </ul>
+
+          </div>
+          {{else}}
+          <div class="nav-item {{if $active}} active {{end}}  px-0">
+            <a class="nav-link" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
+              href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">{{.Name}}</a>
+          </div>
+          {{ end }}
+          {{end}}
+        </div>
+        <div class="px-sm-3 d-none d-lg-block">
+          {{partial "language-switch.html" . }}
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

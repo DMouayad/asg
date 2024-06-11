@@ -1,0 +1,16 @@
+enable: true
+sectionTitle: Latest News
+items:
+  - title: A new Collaboration
+    content: >-
+      We are on the verge of a new partnership with specialist consulting and
+      design firm in Germany.
+    image: /images/news/german-flag.jpg
+  - title: 'Raising the bar, targeting FIFA Certification'
+    content: >-
+      Areena Saudi German is taking a major step forward in the world of sports,
+      actively preparing to receive a certification from the FIFA.
+    image: /images/news/field.jpg
+  - title: New Openings
+    content: Join us now
+    image: /images/news/jop-app.jpg

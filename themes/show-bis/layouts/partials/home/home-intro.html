@@ -1,0 +1,84 @@
+<section class="home-intro" id="home-intro">
+  {{ $data := index site.Data site.Language.Lang }}
+
+  {{$slidesHero := $data.home.intro.items}}
+
+  {{$carouselId := "introImagesCarousel"}}
+  <div class="carousel-btns">
+    <button class="carousel-control-prev " data-bs-theme="dark" type="button" data-bs-target="#{{$carouselId}}"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next " data-bs-theme="dark" type="button" data-bs-target="#{{$carouselId}}"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div id="{{$carouselId}}" class="carousel slide" data-bs-interval="5000" data-bs-theme="dark" data-bs-ride="false"
+    data-bs-pause="false">
+    {{$firstSlideInfo := index $slidesHero 0}}
+    {{with $firstSlideInfo}}
+    {{$imgWebp := partial "image-processor.html" (dict "ImageSrc" .image "ImgParam" "webp q70 resize 1920x1080") . }}
+
+    <div class="carousel-item active">
+      <div class="intro-img" style="background-image: url('{{$imgWebp}}');"> </div>
+
+      <div class="hero-card  animate__animated animate__fadeIn">
+        <div class="hero-card-content">
+          <div class="hero-title h1 animate__animated animate__fadeInUp w-auto mb-3 fw-semibold  ">
+            {{.title}}</div>
+          <hr>
+          <div class="hero-subtitle h5 w-auto animate__animated animate__fadeInUp ">{{.subtitle}}</div>
+          {{with .details}}
+          <div class="d-flex flex-row flex-wrap">
+
+            {{range .}}
+            <a target="_blank" class="detail-card" href="{{.link | absLangURL}}">{{.title}}</a>
+            {{end}}
+          </div>
+
+          {{end}}
+          <div class="d-flex flex-row">
+
+            {{with .learnMoreLink}}
+            {{$ariaLabel := print (i18n `learnMore`) " " $.Title }}
+            <a class=" me-4 w-auto hero-btn hero-btn-primary" aria-label="{{$ariaLabel}}"
+              href="{{. | relLangURL}}">{{i18n
+              "learn-more"}}</a>
+            {{end}}
+            {{$linkLabel := ""}}
+            {{$ariaLabel := ""}}
+            {{if .projectLink}}
+            {{$linkLabel = i18n `view-project` }}
+            {{$ariaLabel = print (i18n `view-our-work`) " " $firstSlideInfo.title }}
+
+            <a class="w-auto hero-btn" aria-label="{{$ariaLabel}}"
+              href="{{.projectLink | relLangURL}}">{{$linkLabel}}</a>
+            {{else}}
+            {{if .sectionLink}}
+            {{$linkLabel = i18n "explore-services" }}
+            {{$ariaLabel = print (i18n `learnMore`) " " $firstSlideInfo.title }}
+
+            <a class="w-auto hero-btn" aria-label="{{$ariaLabel}}"
+              href="{{.sectionLink | relLangURL}}">{{$linkLabel}}</a>
+            {{end}}
+            {{end}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {{end}}
+
+    {{$slidesWithoutFirst := after 1 $slidesHero}}
+    {{range $slidesWithoutFirst}}
+    {{$imgWebp := partial "image-processor.html" (dict "ImageSrc" .image "ImgParam" "webp resize 1920x1080") . }}
+    <div class="carousel-item">
+      <div class="intro-img" data-background-image="{{$imgWebp}}"> </div>
+      {{partial "home/intro-slide.html" .}}
+    </div>
+    {{end}}
+  </div>
+</section>

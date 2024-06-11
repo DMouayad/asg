@@ -1,0 +1,15 @@
+{{define "main"}}
+{{partial "page-header.html" . }}
+<section class="projects-page">
+    <div class="container-fluid  ">
+        <div class="d-flex flex-row flex-wrap justify-content-center ">
+            {{ $projects := where .Site.RegularPages "Type" "projects"}}
+            {{ range $projects }}
+            <div class="project-item flex-fill ">
+                {{.Render "summary"}}
+            </div>
+            {{ end }}
+        </div>
+</section>
+
+{{end}}

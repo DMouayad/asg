@@ -1,0 +1,11 @@
+{{$pageLinkLabel := print (i18n `learnMore`) " " .Title}}
+{{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" .Params.image "ImgParam" "webp q70 resize 500x350")}}
+<div class=" ts-service-box" data-background-image="{{$imgWebp}}">
+    <div class="ts-service-box-info">
+        <div class="h5 service-box-title">
+            <a aria-label="{{$pageLinkLabel}}" href=" {{ .Permalink }}">{{ .Title }}</a>
+        </div>
+        <a class="view-projects-link" aria-label="{{$pageLinkLabel}}" href=" {{ .Permalink }}">
+            {{i18n "view-details"}}</a>
+    </div>
+</div>

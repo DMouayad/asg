@@ -1,0 +1,49 @@
+section,
+.section-padding {
+  padding: 40px 0;
+  position: relative;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.bg-card {
+  background-color: #fcfcfc;
+}
+
+/* Section title */
+.section-title {
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  @media (min-width:800px) {
+    margin-bottom: 1.2rem;
+  }
+
+  @media (max-width:500px) {
+    max-width: 420px;
+  }
+}
+
+.custom-shape {
+  overflow: hidden;
+  border-radius: 8px;
+  border-top-left-radius: 120px;
+
+  border-bottom-right-radius: 120px;
+
+  @media (max-width:600px) {
+    border-radius: 10px;
+  }
+}
+
+
+
+hr {
+  border: 0;
+  height: 5px;
+  margin: 40px 0;
+  opacity: 0.9;
+}

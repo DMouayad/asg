@@ -1,0 +1,81 @@
+<div class="container gx-1 gx-md-3 ">
+    <div class="d-block d-md-none carousel-block">
+
+        {{$projectCount := len .projects}}
+        {{$carouselId := "mobileSliderCarousel"}}
+        <div animate-data="fadeInUp" class="projects-slider-title">
+            <div class="h3  my-0">{{.sliderTitle}}</div>
+            {{if gt $projectCount 1}}
+            <div class="carousel-btns">
+                <button class="carousel-control-prev " data-bs-theme="dark" type="button"
+                    data-bs-target="#{{$carouselId}}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next " data-bs-theme="dark" type="button"
+                    data-bs-target="#{{$carouselId}}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            {{end}}
+        </div>
+
+        <div id="{{$carouselId}}" class="carousel slide " data-bs-interval="5000" data-bs-ride="false">
+            {{range $index, $el := .projects}}
+            <div animate-data="fadeInBottom" class="carousel-item {{if eq $index 0}} active {{end}}">
+                {{.Render "summary"}}
+            </div>
+            {{end}}
+        </div>
+    </div>
+
+    <div class="d-none d-md-flex flex-lg-row flex-column  list-carousel ">
+        {{$projectCount := len .projects}}
+
+        {{$carouselId := "ProjectCarousel"}}
+        <div animate-data="fadeInLeft" class="  projects-slider-title">
+            <div class="h3 fw-semibold  ">{{.sliderTitle}}</div>
+            {{if gt $projectCount 3}}
+            <div class="carousel-btns">
+                <button class="carousel-control-prev " data-bs-theme="dark" type="button"
+                    data-bs-target="#{{$carouselId}}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next " data-bs-theme="dark" type="button"
+                    data-bs-target="#{{$carouselId}}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            {{end}}
+        </div>
+        {{$slidesCount := math.Div $projectCount 3}}
+        {{if ne (math.Mod $projectCount 3) 0}}
+        {{$slidesCount = math.Sum 1 $slidesCount }}
+        {{end}}
+
+        <div id="{{$carouselId}}" animate-data="fadeInRight" class="flex-fill carousel slide " data-bs-interval="5000"
+            data-bs-ride="false">
+            {{range seq $slidesCount}}
+            {{$items := ""}}
+            {{if eq . 1}}
+            {{$items = first 3 $.projects}}
+            {{else}}
+            {{$items = first 3 (after (math.Product 3 (math.Sub . 1)) $.projects)}}
+            {{end}}
+            <div class=" carousel-item {{if eq . 1}} active {{end}}">
+                <div class="projects-slider-list ">
+                    {{range $items}}
+
+                    <div class="project-slider-item">
+                        {{.Render "summary"}}
+                    </div>
+                    {{end}}
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+.partners-home-section {
+  background-color: #fcfcfc;
+  padding: 60px 30px;
+
+  @include tablet {}
+
+  @media (max-width:1200px) {
+    padding: 40px 20px;
+    height: fit-content;
+  }
+
+  .section-title {
+    font-weight: 600;
+    color: $body-text-color;
+  }
+
+  .md-row {
+    padding: 40px 30px;
+    padding-top: 50px;
+  }
+}
+
+.card-sm,
+.card {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 4px;
+  border: none;
+  height: 90px;
+
+  @media (max-width: 780px) {
+    margin-bottom: 30px;
+  }
+
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @include mobile {}
+}
+
+.card-sm {
+  background-repeat: no-repeat;
+}

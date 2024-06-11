@@ -1,0 +1,9 @@
+<picture>
+    {{ $imgURL := "images/placeholder.jpg"}}
+    {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" $imgURL "ImgParam"
+    "webp q70 resize 500x350")}}
+    {{ $imgPNG := partial "image-processor.html" (dict "ImageSrc" $imgURL "ImgParam"
+    "PNG q60 resize 500x350")}}
+    <source srcset="{{ $imgWebp }}" type="image/webp">
+    <img loading="lazy" width="500px" height="350px" src="{{$imgPNG}}">
+</picture>

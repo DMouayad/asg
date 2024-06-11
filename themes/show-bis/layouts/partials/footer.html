@@ -1,0 +1,101 @@
+{{ $data := index site.Data site.Language.Lang }}
+<footer class="footer ">
+    {{partial "news-section.html" .}}
+    <div class="container  bg-overlay">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-10">
+                <div class="footer-main">
+                    <div class="d-flex flex-row footer-logo">
+                        {{ $logo_webp := partial "image-processor.html" (dict "ImageSrc" site.Params.logo "ImgParam"
+                        "webp q90 resize 81x")}}
+                        <img width="58px" height="64px" loading="lazy" src="{{ $logo_webp }}" alt="{{ .Site.Title }}">
+                        <div class="h5 footer-logo-text">
+                            <span>{{ i18n "areena" }}</span> <br>
+                            <span class="footer-logo-border-green">{{ i18n "saudi" }} </span>
+                            <span class="footer-logo-border-black">{{ i18n "GE" }}</span><span
+                                class="footer-logo-border-red">{{
+                                i18n "RM"
+                                }}</span><span class="footer-logo-border-yellow">{{ i18n "AN" }}</span>
+                        </div>
+
+                    </div>
+                    <div class="main flex-row d-flex align-items-start   w-100 flex-wrap justify-content-between ">
+                        {{with $data.footer.aboutCompany}}
+
+                        <div class=" footer-company-about my-3 my-lg-0 ">
+                            <div class="h6 fw-semibold">{{ i18n "about-us" }}</div>
+                            {{ . }}
+                        </div>
+                        {{end}}
+                        <div class="contact-col my-3 my-lg-0">
+                            {{$phoneIcon := "icons/icon-phone.png" | absURL}}
+                            {{$addressIcon := "icons/icon-address.png" | absURL}}
+                            {{with $data.footer.saudiContactSectionTitle}}
+                            <div class="h6 fw-semibold contact-text-">{{ . }}</div>
+                            {{end}}
+                            {{$ksaHeadOffice := where $data.contact_info.ksaOffices "useInFooter" true}}
+                            {{range $ksaHeadOffice }}
+
+                            <ul class="list-round">
+                                <li>
+                                    <span><img loading="lazy" src="{{$addressIcon}}" width="26px" height="26px"
+                                            alt="Address Icon"></span>
+                                    {{ .address }}
+                                </li>
+                                <li style="direction: ltr !important;">
+                                    <span class="phone-icon "><img loading="lazy" src="{{$phoneIcon}}" width="26px"
+                                            height="26px" alt="Phone Icon"></span> {{ .phoneNumber }}
+                                </li>
+                            </ul>
+                            {{ end }}
+                        </div>
+                        {{$GEphoneIcon := "icons/icon-red-phone.png" | absURL}}
+                        {{$GEaddressIcon := "icons/icon-red-address.png" | absURL}}
+
+                        <div class="contact-col my-3 my-lg-0 ">
+                            {{with $data.footer.germanyContactSectionTitle}}
+                            <div class="h6 fw-semibold contact-text-">{{ . }}</div>
+                            {{end}}
+                            {{$germanHeadOffice := where $data.contact_info.germanyOffices "useInFooter" true}}
+
+                            {{range $germanHeadOffice}}
+
+                            <ul class="list-round">
+                                <li>
+                                    <span><img src="{{$GEaddressIcon}}" loading="lazy" width="26px" height="26px"
+                                            alt="Address Icon"></span>
+                                    {{ .address }}
+                                </li>
+                                <li style="direction: ltr !important">
+                                    <span class="phone-icon"><img loading="lazy" src="{{$GEphoneIcon}}" width="26px"
+                                            height="26px" alt="Phone Icon"></span>
+                                    <span>{{ .phoneNumber }} </span>
+                                </li>
+                            </ul>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                <hr class="footer-hr">
+                <div class="footer-bottom">
+
+                    {{if $data.contact_info.socials.enable}}
+                    <ul class="social-links mb-3 my-md-0">
+                        <li class="body-text my-0">{{i18n "follow-us"}}</li>
+                        {{range $data.contact_info.socials.items}}
+                        <li class="social-icon">
+                            <a href={{.link}} target="_blank">
+                                <img width="30px" height="30px" loading="lazy" src="{{.icon | absURL}}" alt={{.desc}}>
+                            </a>
+                        </li>
+                        {{end}}
+                    </ul>
+                    {{end}}
+                    <div class="copyright">
+                        <span>Copyright &copy; {{ now.Year }} {{.Site.Params.copyright}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

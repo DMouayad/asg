@@ -1,0 +1,33 @@
+{{$data := index site.Data site.LanguageCode}}
+{{$sectionData := $data.home.about}}
+<section class="about-section ">
+    <div class="d-flex flex-column align-items-center">
+        {{ $logo := partial "image-processor.html" (dict "ImageSrc" site.Params.logo "ImgParam"
+        "webp q90 resize x170")}}
+        <img loading="lazy" class="logo mb-5" src="{{$logo}}" alt="">
+
+        <h1 class="text-center">
+            <div class="company-name section-title">
+                <span class="border-light">{{ i18n "areena" }}</span>
+                <span class="green-border">{{ i18n "saudi" }} </span>
+                <span class="black-border">{{ i18n "GE" }}</span><span class="red-border">{{ i18n "RM"
+                    }}</span><span class="yellow-border">{{ i18n "AN" }}</span>
+            </div>
+        </h1>
+        <div class="h5 fw-semibold mb-4 subtitle"> {{i18n "for-general-contracting"}}</div>
+    </div>
+    {{ $imgURL := $sectionData.image}}
+    {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" $imgURL "ImgParam" "webp resize x600")}}
+    <div class="content d-flex flex-md-row flex-column-reverse justify-content-center align-items-center ">
+        <div animate-data="zoomIn" class=" content-col">
+            <div class="title h5 fw-semibold  mb-0">{{$sectionData.sectionTitle}}</div>
+            <p>{{ $sectionData.firstParagraph}}</p>
+            <p>{{ $sectionData.secondParagraph}}</p>
+            <a class="btn" target="_blank" href="{{`about-us` | relLangURL}}">
+                {{i18n "learn-more"}}</a>
+        </div>
+        <div class=" img-col" data-background-image="{{$imgWebp}}">
+        </div>
+
+    </div>
+</section>

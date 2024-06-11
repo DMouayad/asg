@@ -1,0 +1,16 @@
+title: التجارة والتوريد
+description: أنجز مشاريعك بثقة مع منتجات عالية الجودة وذات مواصفات عالمية.
+  نلبي متطلبات مشاريعكم السكنية والتجارية والصناعية.
+backgroundImage:
+subServices:
+  - title: مواد البناء
+    icon: "/icons/con-sand-shovel.svg"
+  - title: مواد الطلاء
+    icon: "/icons/con-tin.svg"
+  - title: ألواح وأسقف الجبس
+    icon: "/icons/gypsumBoard.svg"
+  - title: معدات الملاعب الرياضية
+    icon: "/icons/football-field.svg"
+  - title: مواد العزل المائي والحراري
+    icon: "/icons/barrel.svg"
+_template: supply_trade_services

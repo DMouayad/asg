@@ -1,0 +1,284 @@
+@import "common-non-critical-style.scss";
+@import "project-card.scss";
+@import "templates/projects-slider";
+
+
+.project-details-section {
+    background-color: $card-color;
+
+    .project-info-card {
+        min-height: 400px;
+        max-height: 500px;
+        width: 50%;
+        right: 24%;
+        bottom: 0;
+        background-color: #fcfcfc;
+        color: $body-text-color;
+        position: absolute;
+        padding: 40px 80px;
+        padding-left: 100px;
+        padding-bottom: 20%;
+
+
+        @media(max-width:1200px) {
+            right: 8%;
+            left: 8%;
+            padding: 50px;
+            height: fit-content;
+        }
+
+        @include mobile {
+            padding: 20px 30px;
+            // height: 100%;
+            max-height: 500px;
+            right: 0;
+            left: 0;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        @include mobile-xs {
+            padding: 20px;
+            width: 90%;
+            max-height: 490px;
+        }
+    }
+}
+
+
+.project-info-card {
+
+    .projects-link {
+        position: relative;
+        color: $dark-green-color;
+        font-weight: 500;
+
+        @include mobile {
+            text-decoration: underline;
+            padding: 10px 0;
+        }
+    }
+
+    .project-name {
+        margin-bottom: 40px;
+        font-weight: 600;
+    }
+}
+
+.project-details-section {
+    padding-top: 0;
+    padding-bottom: 30px;
+    height: 100vh;
+
+    @media(max-width:1200px) {
+        height: 60vh;
+        max-height: 650px;
+    }
+
+    @include mobile {
+        height: 100vh;
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+
+    .main-image {
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: #0000004b;
+            background-blend-mode: color;
+            left: 0;
+            top: 0;
+        }
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        background-position: left;
+        background-position-y: 90px;
+        background-repeat: round no-repeat;
+        background-color: $dark-bg;
+
+        @media (max-width:900px) {
+            top: 0;
+            background-position-x: -100px;
+            background-position-y: 70px;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    }
+}
+
+
+.proj-images-title-row {
+    margin-bottom: 50px;
+    padding: 0 30px;
+
+    .h3 {
+        color: $on-background-color;
+    }
+}
+
+.project-imgs {
+    position: relative;
+    overflow: hidden;
+
+    .expand-imgs-button,
+    .collapse-imgs-button {
+        text-transform: capitalize;
+
+        .btn-primary {
+            background-color: transparent;
+            color: $on-background-color;
+            border: 2px solid $on-background-color;
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: $on-background-color;
+                color: white;
+            }
+        }
+    }
+
+    .collapse-imgs-button {
+        margin-top: 12px;
+    }
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding:0 50px;
+
+
+    .project-img {
+
+        margin: 0 2px;
+        overflow: hidden;
+        max-width: 33%;
+        margin: 2px;
+
+        @media (max-width:1200px) {
+            width: 50%;
+        }
+
+        @media (max-width:1200px) and (min-width:600px) {
+            max-width: 45%;
+
+            img {
+                max-width: 400px;
+                height: 100%;
+                max-height: 300px;
+            }
+        }
+    }
+
+    @include tablet {
+        align-items: flex-start;
+    }
+}
+
+.project-info-card .details-list {
+    list-style: square;
+    font-size: 16px;
+    padding-right: 4px;
+    line-height: 27px;
+}
+
+.ar-typography .project-info-card .details-list {
+    padding-left: 4px;
+    padding-right: 20px;
+}
+
+.work-details-section .work-categories {
+    margin: 0;
+
+    h6,
+    .h6,
+    p,
+    a {
+        font-size: 14px;
+        color: #fff8f8;
+    }
+}
+
+.work-details-section {
+    background-color: $dark-green-color;
+    padding: 20px 0;
+}
+
+
+.subtitle {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: $dark-green-color;
+}
+
+
+.project-imgs-slider {
+
+    .carousel {
+        padding-top: 30px;
+    }
+
+    overflow: hidden;
+}
+
+.related-projects-sec {
+    padding: 70px 20px;
+    height: fit-content;
+
+    @include mobile {
+        padding: 40px 20px;
+    }
+}
+
+.projects-imgs-sec {
+    padding: 70px 0;
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
+    background-color: $card-color;
+}
+
+.project-img-div {
+    height: 300px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include mobile {
+        height: 300px;
+        background-size: cover;
+
+    }
+}
+
+.mobile-carousel-title {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    .carousel-btns {
+        width: 40%;
+        margin: 0;
+    }
+}

@@ -1,0 +1,59 @@
+slides:
+  - items:
+      - img: https://cmci.com.sa/wp-content/uploads/2021/10/logo-1.png
+        name: "CMCI Company"
+        isLarge: false
+      - img: https://upload.wikimedia.org/wikipedia/ar/thumb/3/3d/Saudi-Equestrian-Club-logo.jpg/220px-Saudi-Equestrian-Club-logo.jpg
+        name: "Saudi-Equestrian-Club"
+        isLarge: false
+      - img: https://seeklogo.com/images/S/saudi-journalists-association-logo-02A78A2830-seeklogo.com.png
+        name: "Saudi Journalists Commission"
+        isLarge: true
+      - img: https://upload.wikimedia.org/wikipedia/ar/thumb/9/98/Logorcrc.png/280px-Logorcrc.png
+        name: "Royal Commission For Riyadh City"
+        isLarge: true
+  - items:
+      - img: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/King_Khalid_International_Airport_Logo.svg/375px-King_Khalid_International_Airport_Logo.svg.png
+        name: "King Khalid International Airport"
+        isLarge: true
+      - img: https://asfco.sa/wp-content/uploads/2023/04/8956345645.png
+        name: "Advanced Systems Consultations"
+        isLarge: true
+      - img: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/%D8%B4%D8%B9%D8%A7%D8%B1_%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%AF%D8%A7%D8%B1_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_2014-05-26_23-53.jpg/330px-%D8%B4%D8%B9%D8%A7%D8%B1_%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%AF%D8%A7%D8%B1_%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85_2014-05-26_23-53.jpg
+        name: "Dar Al-Uloom"
+        isLarge: false
+      - img: https://www.albawani.net/wp-content/uploads/2020/03/logo-one-light.png
+        name: "Al-Bawani"
+        isLarge: true
+  - items:
+      - img: https://upload.wikimedia.org/wikipedia/commons/6/6e/Hempel_Logo.jpg
+        name: "Hempel"
+        isLarge: true
+      - img: https://ksu.edu.sa/sites/default/files/ksu_logo_out.png
+        name: "King Saud University"
+        isLarge: true
+      - img: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/NADEC-New-logo-.png/330px-NADEC-New-logo-.png
+        name: "Nadec Company"
+        isLarge: false
+      - img: https://www.alfanar.com/assets/images/saudi-arabia-alfanar-logo.png
+        name: "Alfanar Company"
+        isLarge: true
+
+  - items:
+      - img: https://www.jotun.com/globalassets-b2b/.com/jotun-logo.svg
+        name: "Jotun Company"
+        isLarge: true
+      # - img: https://imgs.search.brave.com/07vyx5OLHmFNdIxw_vv1DqprzTD8a5oa5iQxASDo7hA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90aW1n/MGNmLmI4Y2RuLmNv/bS9pbWFnZXMvbG9n/by80OS80ODA4NDlf/bG9nb18xNTYyNDg0/MzczX24ucG5n
+      #   name: "SATCO Saudi"
+      #   isLarge: false
+      - img: https://el-hoda-gypsum.com/wp-content/uploads/2023/08/logo-removebg-preview-e1692303216657.png
+        name: "El-Hoda Gypsum"
+        isLarge: false
+      - img: https://images.taker.io/kabbani_kitchen/1687158086_6H9PbM.png
+        name: "Patisserie Jareer"
+        isLarge: false
+      # - img: https://riyadh-park.com/wp-content/uploads/2020/11/MALLS-ALL-LOGOS-2020-01.png
+      #   name: "Riyadh Park"
+      #   isLarge: false
+
+

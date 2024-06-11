@@ -1,0 +1,191 @@
+@import "common-non-critical-style.scss";
+
+.about-page-title {
+  position: relative;
+
+  .title-col {
+    height: 270px;
+
+    @media (min-width:600px) {
+      height: 70vh;
+      max-height: 600px;
+    }
+  }
+
+  .h1 {
+    border-bottom: 3px solid;
+    color: white;
+    margin: 0;
+    text-shadow: #091a10 0px 0px 10px;
+    font-weight: 600;
+    padding-bottom: 15px;
+  }
+
+  @media (max-width:400px) {
+    padding: 10px;
+  }
+
+}
+
+
+.intro-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 270px;
+  position: relative;
+
+  @media (min-width:600px) {
+    height: 70vh;
+    max-height: 520px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0000004f;
+
+  }
+
+}
+
+.about-section {
+  @media (min-width:1000px) {
+    .container {
+      max-width: 1100px;
+    }
+
+    .content-col {
+      margin: 0;
+    }
+
+    padding: 60px 0;
+  }
+}
+
+.about-section {
+
+  &.dark-section {
+    background-color: $dark-bg;
+
+    .title-col,
+    p {
+      color: white;
+    }
+  }
+}
+
+.about-section .content-col {
+  max-width: 520px;
+  margin-top: 6px;
+  line-height: 25px;
+
+  p {
+    font-size: medium;
+  }
+
+  @media (max-width:900px) {
+    max-width: 80%;
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.img-col {
+  border-radius: 2px;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #14502b3d;
+  }
+
+  .h1 {
+    text-shadow: #091a10 0px 0px 10px;
+    position: relative;
+    color: white;
+  }
+
+
+  @media (max-width:900px) {
+    height: 350px;
+
+  }
+
+  @include mobile {
+    height: 280px;
+  }
+}
+
+
+.about-section .title-col {
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  @include mobile {
+    height: 280px;
+  }
+}
+
+
+.company-foundations .title {
+  margin-bottom: 40px;
+}
+
+.company-foundations {
+  padding: 50px;
+}
+
+
+
+.about-box {
+  padding: 20px 20px;
+  background-color: $dark-bg;
+  border-radius: 4px;
+  // max-width: 300px;
+  min-height: 250px;
+
+  .h5 {
+    text-align: center;
+    color: $lighter-green-color;
+    border-bottom: 2px solid;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+
+    @media (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  margin-bottom: 20px;
+
+  p {
+    color: white;
+
+  }
+
+  @media (max-width:1200px) {
+    max-width: 350px;
+    margin-bottom: 10px;
+  }
+}

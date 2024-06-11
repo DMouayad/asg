@@ -1,0 +1,39 @@
+<div class="hero-card  animate__animated animate__fadeIn animate__delay-1s">
+    <div class="hero-card-content">
+        <div class="hero-title h1 animate__animated animate__fadeInUp animate__delay-1s w-auto mb-3 fw-semibold  ">
+            {{.title}}</div>
+        <hr>
+        <div class="hero-subtitle h5 w-auto animate__animated animate__fadeInUp animate__delay-1s ">{{.subtitle}}</div>
+        {{with .details}}
+        <div class="d-flex flex-row flex-wrap ">
+            {{range .}}
+            <a class="detail-card" target="_blank" href="{{.link | absLangURL}}">{{.title}}</a>
+            {{end}}
+        </div>
+        {{end}}
+        <div class="d-flex flex-row">
+            {{with .learnMoreLink}}
+            {{$ariaLabel := print (i18n `learnMore`) " " $.title }}
+            <a class=" me-4 w-auto hero-btn hero-btn-primary" aria-label="{{$ariaLabel}}"
+                href="{{. | relLangURL}}">{{i18n "learn-more"}}</a>
+            {{end}}
+            {{$linkLabel := ""}}
+            {{$ariaLabel := ""}}
+            {{if .projectLink}}
+            {{$linkLabel = i18n `view-project` }}
+            {{$ariaLabel = print (i18n `view-our-work`) " " $.title }}
+
+            <a class="w-auto hero-btn" aria-label="{{$ariaLabel}}"
+                href="{{.projectLink | relLangURL}}">{{$linkLabel}}</a>
+            {{else}}
+            {{if .sectionLink}}
+            {{$linkLabel = i18n "explore-services" }}
+            {{$ariaLabel = print (i18n `learnMore`) " " $.title }}
+
+            <a class="w-auto hero-btn" aria-label="{{$ariaLabel}}"
+                href="{{.sectionLink | relLangURL}}">{{$linkLabel}}</a>
+            {{end}}
+            {{end}}
+        </div>
+    </div>
+</div>

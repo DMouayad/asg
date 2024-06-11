@@ -1,0 +1,15 @@
+<div class="sidebar">
+    <div class="widget">
+        <div class="h4 widget-title">{{i18n "our-services"}}</div>
+        <ul class="service-menu">
+            {{$allServices := sort (where .Site.RegularPages "Type" "services")}}
+
+            {{ range $allServices}}
+            <li>
+                <a class="{{if eq  $.RelPermalink .RelPermalink }} active {{end}}" href="{{.RelPermalink}}">
+                    {{.Title}}</a>
+            </li>
+            {{end}}
+        </ul>
+    </div><!-- Widget end -->
+</div><!-- Sidebar end -->

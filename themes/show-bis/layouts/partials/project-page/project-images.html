@@ -1,0 +1,72 @@
+{{ $imgsCount := len .images}}
+{{if gt $imgsCount 0}}
+
+<div id="project-imgs" class=" project-imgs d-none d-md-flex">
+    <div class="proj-images-title-row w-100  d-flex flex-row  ">
+        <div animate-data="fadeInLeft" class=" h3 fw-semibold flex-grow-1 ">{{i18n
+            "project-gallery"}}
+        </div>
+        {{if gt $imgsCount 3}}
+        <div id="expand-imgs-btn" class="expand-imgs-button">
+            <div animate-data="fadeInRight" class=" btn btn-primary"> {{i18n
+                "view-more"}}
+            </div>
+        </div>
+        {{end}}
+    </div>
+    {{range first 3 .images}}
+    <div class="project-img" animate-data="fadeInBottom">
+        {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" . "ImgParam"
+        "webp resize x340")}}
+        <img height="300px" loading="lazy" src="{{$imgWebp}}">
+    </div>
+    {{end}}
+    {{range after 3 .images}}
+    <div hidden id="hidden-project-imgs" class="project-img">
+        <picture>
+            {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" . "ImgParam"
+            "webp resize x340")}}
+            <source srcset="{{ $imgWebp }}" type="image/webp">
+            <img height="300px" loading="lazy" src="{{. | absURL}}">
+        </picture>
+    </div>
+    {{end}}
+
+    <div hidden id="collapse-imgs-btn" class="w-100 text-center  collapse-imgs-button">
+        <div class="btn btn-primary"> {{i18n "view-less"}}</div>
+    </div>
+</div>
+
+<div animate-data="fadeInBottom"
+    class=" project-imgs-slider d-flex flex-column justify-content-center align-items-stretch d-md-none ">
+    {{$carouselId := "projectImgsMobileSliderCarousel"}}
+    <div class="mobile-carousel-title flex-fill ">
+        <div animate-data="fadeInLeft" class="w-50 h3">{{i18n "project-gallery"}}</div>
+
+        {{if gt $imgsCount 1}}
+        <div class="carousel-btns" animate-data="fadeInRight">
+            <button class="carousel-control-prev " data-bs-theme="dark" type="button" data-bs-target="#{{$carouselId}}"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next " data-bs-theme="dark" type="button" data-bs-target="#{{$carouselId}}"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        {{end}}
+    </div>
+
+    <div id="{{$carouselId}}" class="carousel slide " data-bs-interval="5000" data-bs-ride="carousel">
+        {{range $index, $el := .images}}
+        <div class="carousel-item {{if eq $index 0}} active {{end}} carousel-project-img">
+            {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" . "ImgParam"
+            "webp resize x340")}}
+            <div class="project-img-div" data-background-image="{{$imgWebp}}"></div>
+        </div>
+        {{end}}
+    </div>
+</div>
+{{end}}

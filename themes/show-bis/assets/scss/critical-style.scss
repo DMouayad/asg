@@ -1,0 +1,148 @@
+@import "variables";
+@import "mixins";
+
+
+html {
+    overflow-x: hidden !important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.body-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+body,
+body-inner {
+    background-color: $bg-color;
+}
+
+.card-color {
+    background-color: $card-color;
+}
+
+.bg-overlay {
+    background-color: $bg-color;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+.breadcrumb {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.page-banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 300px;
+    width: 100vw;
+    background-position: bottom;
+    background-size: contain;
+
+    @media (max-width:600px) {
+        height: 260px;
+        background-size: 140%;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #e9f3edeb;
+    }
+}
+
+.page-title {
+    min-height: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+
+
+    .h2 {
+        margin: 0;
+        margin-top: 20%;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        @media (min-width:1000px) {
+            padding: 0 72px;
+            line-height: 44px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        min-height: 330px;
+    }
+}
+
+.ar-typography {
+
+    .breadcrumb-item,
+    .breadcrumb-item a {
+        font-size: small;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: none;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::after {
+        float: right;
+        padding-left: 0.5rem;
+        // color: #e7e7e7;
+        content: var(--bs-breadcrumb-divider, "/");
+    }
+}
+
+a {
+    color: inherit;
+    transition: 0.2s ease;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a {
+    border: 0;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background: none;
+}
+
+a[href^="tel"] {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+@import "templates/preloader";
+@import "typography";
+@import "templates/navigation";
+@import "animations";

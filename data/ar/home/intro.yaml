@@ -1,0 +1,57 @@
+items:
+  - title: "كلُّ ما يتعلق بمقاولات البناء"
+    subtitle:
+    learnMoreLink: "services/construction"
+    sectionLink: "#contracting-services"
+    image: "/images/home-slider/construction1.jpg"
+    _template: serviceSlide
+
+  - title: "من خدماتنا في التجارة والتوريد"
+    subtitle: تجهيزات الملاعب الرياضية
+    sectionLink: "#supply-trade-services"
+    image: "/images/home-slider/trade-supply.jpg"
+    _template: serviceSlide
+
+  - title: "أعمال التشطيبات"
+    subtitle: خدمات الطلاء - ألواح الجبس - تركيب أرضيات
+    sectionLink: "#contracting-services"
+    learnMoreLink: "services/finishing-works"
+    image: "/images/home-slider/f2.jpg"
+    _template: serviceSlide
+
+  - title: "أنظمة الأرضيات"
+    subtitle: مواقف السيارات - المنشآت الصناعية - إيبوكسي ذاتي التسوية
+    sectionLink: "#contracting-services"
+    learnMoreLink: "services/flooring-systems"
+    image: "/images/home-slider/flooring.jpg"
+    _template: serviceSlide
+
+  - title: "الريـاض بارك مول"
+    subtitle:
+    isProject: true
+    image: "/images/home-slider/riyadh-park-mall.jpg"
+    projectLink: "projects/riyadh-park-mall"
+    details:
+    - title: البناء والإنشاء
+      link: "services/construction"
+    - title: أعمال التشطيب
+      link: "services/finishing-works"
+    - title: هندسة الالكتروميكانيك والسباكة
+      link: "services/mep-engineering"
+    _template: projectSlide
+
+  - title: "مبنى هيئة الصحفيين السعوديين"
+    image: "/images/home-slider/sja.jpg"
+    subtitle:
+    isProject: true
+    projectLink: "projects/saudi-journalists-association-building"
+    details:
+    - title: هندسة الالكتروميكانيك والسباكة
+      link: "services/mep-engineering"
+    - title: إصلاح الخرسانة
+      link: "services/concrete-joints-and-repairs"
+    - title: أعمال العزل
+      link: "services/insulation-works"
+    _template: projectSlide
+
+_template: intro

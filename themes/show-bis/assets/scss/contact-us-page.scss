@@ -1,0 +1,265 @@
+@import "common-non-critical-style.scss";
+
+.navigation {
+  &.transl {
+    background-color: transparent !important;
+  }
+}
+
+.page-intro {
+  background-color: $dark-bg;
+  height: 80vh !important;
+
+  .row {
+    align-items: center;
+    height: 100%;
+
+    @media (max-width:900px) {
+      height: 60%;
+      align-items: end;
+      min-height: 340px;
+    }
+  }
+
+  .section-title {
+    position: relative;
+    color: #fcfcfc;
+    border-bottom: 4px solid;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    width: fit-content;
+  }
+
+  .subtitle {
+    color: white;
+    font-weight: 500;
+  }
+
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+
+  @include mobile {
+    background-size: 80%;
+  }
+}
+
+.ar-typography .page-intro {
+  background-position: bottom 0 left 0;
+}
+
+/* Input form */
+
+.form-control {
+  box-shadow: none;
+  border: 1px solid $darker-green-color;
+  padding: 5px 20px;
+  height: 44px;
+  background: none;
+  color: #424242;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #ffb600;
+
+
+}
+
+.contact-form-section {
+  background-color: $dark-bg;
+
+  form {
+    padding: 0 30px;
+    padding-top: 70px;
+
+    @media (max-width: 900px) {
+      padding: 20px 12px;
+    }
+  }
+
+  .form-img {
+    height: 470px;
+    background-repeat: no-repeat;
+
+    @media (max-width: 900px) {
+      height: 300px;
+      background-position: center;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 240px;
+    }
+  }
+}
+
+.contact-form-section {
+  .title {
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    color: white;
+  }
+
+  p {
+    padding: 10px 0;
+    font-weight: 400;
+    color: #fcfcfc;
+  }
+}
+
+.contact-form-section .form-group .input {
+  border-radius: 4px;
+
+}
+
+.contact-form-section {
+
+  .form-control {
+    box-shadow: none;
+    height: 52px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    background-color: $card-color;
+
+    @include mobile {
+      height: 40px;
+    }
+  }
+
+  input,
+  textarea {
+    border: none !important;
+  }
+
+  input:hover,
+  textarea:hover {
+    background-color: $orange-yellowish;
+  }
+
+  input:focus,
+  textarea:focus {
+    background-color: white;
+  }
+
+  .submit-btn {
+    width: 130px;
+    height: 48px;
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: $lighter-green-color;
+    float: right;
+  }
+
+  textarea.form-control {
+    min-height: 170px;
+    outline: none;
+  }
+}
+
+.contact-info-section {
+  padding: 50px 0;
+
+  @media (max-width:600px) {
+    .section-title {
+      text-align: center;
+    }
+  }
+
+
+
+  .contact-info {
+    background-color: white;
+    border-radius: 4px;
+    padding: 30px 50px;
+    max-width: 87%;
+    margin: 0 auto;
+    border: 1px solid $dark-green-color;
+    border: 1px solid lightgrey;
+    min-width: 330px;
+
+    .subtitle {
+      border-bottom: 3px solid;
+      padding-bottom: 15px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      text-align: center;
+
+      @media (max-width:600px) {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .text-red {
+      color: $red-primary !important;
+    }
+
+    .contact-line {
+
+      margin-bottom: 50px;
+      text-align: center;
+      background-color: $dark-bg;
+      padding: 15px 10px;
+      border-radius: 4px;
+      min-width: 310px;
+
+      font-size: 17px;
+      color: white;
+      font-weight: 600;
+
+      .title {
+        color: $card-color;
+        margin-bottom: 30px;
+
+      }
+
+      img {
+        margin: 10px 0;
+      }
+
+      @include mobile {
+        padding: 15px 10px;
+        font-size: 15px;
+        margin-bottom: 10px;
+
+      }
+    }
+
+    @media (max-width: 1200px) {
+
+      max-width: 100%;
+      width: 100%;
+
+      .contact-line {
+        min-width: 250px;
+        margin-bottom: 15px;
+
+      }
+    }
+
+    @include mobile {
+      padding: 30px 10px;
+    }
+  }
+
+  .google-map {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+
+    @include tablet {
+      width: 100%;
+      height: 350px;
+
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

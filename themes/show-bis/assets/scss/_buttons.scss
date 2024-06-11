@@ -1,0 +1,28 @@
+/* Button */
+.btn {
+  border-radius: 4px;
+
+  &:active,
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.btn-primary {
+  border: none;
+  background: $dark-green-color;
+}
+
+
+.btn-primary:hover,
+.btn-dark:hover,
+.btn-white.btn-primary:hover {
+  background: $darker-green-color;
+  color: white;
+
+  &:active,
+  &:focus {
+    color: white;
+    background-color: $dark-green-color;
+  }
+}

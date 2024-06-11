@@ -1,0 +1,137 @@
+{{ define "main" }}
+{{$contactData := (index site.Data site.Language.Lang).contact_info}}
+{{$bgImage := $contactData.contactPage.image}}
+{{$imgWebp := partial "image-processor.html" (dict "ImageSrc" $bgImage "ImgParam"
+"webp resize 500x") . }}
+
+<section class="page-intro" data-background-image="{{$imgWebp}}">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-12 col-md-4 px-5 px-md-0">
+
+            <div class="animate__animated animate__fadeInUp h1 section-title text-center  ">{{ .Title }}</div>
+            {{with $contactData.contactPage.subtitle}}
+            <div class=" subtitle h6 my-5 ">{{.}}</div>
+            {{end}}
+        </div>
+    </div>
+</section>
+
+
+<section class="contact-info-section">
+    <div class="container ">
+        <!-- End Contacts Form -->
+        <!-- <div class="h5 fw-semibold  my-4 text-center green-title">{{$contactData.ksaOfficesSectionTitle}}</div> -->
+        {{range $index, $el :=$contactData.ksaOffices}}
+        <div animate-data="fadeInUp" class="contact-info row pt-4 justify-content-between">
+            <div class="subtitle h5"> {{ .officeName }}</div>
+            <div class="col-md-3 contact-line ">
+                <img width="33px" src="{{`/icons/location-green.svg` | absURL}}" alt="">
+                <div class="title h6"> {{i18n "address"}} </div>
+                <div>{{.address}}</div>
+            </div>
+            <div class="col-md-3 contact-line ">
+                <img width="33px" src="{{`/icons/phone-1.svg` | absURL}}" alt="">
+                <div class="title h6"> {{i18n "tel"}} </div>
+                <div style="direction: ltr !important;">{{.phoneNumber}} </div>
+            </div>
+            <div class="col-md-3 contact-line">
+                <img width="33px" src="{{`/icons/mail-green.svg` | absURL}}" alt="">
+                <div class="title h6"> {{i18n "post"}} </div>
+                <div>{{.POBox}}</div>
+            </div>
+
+            {{with .locationOnMap}}
+            <div class="col-12 col-md-12 px-0">
+                <div class="google-map mt-4 mt-md-0 "> {{. | markdownify}}</div>
+            </div>
+            {{end}}
+        </div>
+        <br>
+        <br>
+        {{end}}
+        {{range $index, $el :=$contactData.germanyOffices}}
+        <div animate-data="fadeInUp" class="contact-info row pt-4 justify-content-between">
+            <div class="subtitle h5"> {{ .officeName }}</div>
+            <div class="col-md-3 contact-line ">
+                <img width="33px" src="{{`/icons/location-red.svg` | absURL}}" alt="">
+                <div class="title h6"> {{i18n "address"}} </div>
+                <div>{{.address}}</div>
+            </div>
+            <div class="col-md-3 contact-line ">
+                <img width="33px" src="{{`/icons/phone-red.svg` | absURL}}" alt="">
+                <div class="title h6"> {{i18n "tel"}} </div>
+                <div style="direction: ltr !important;">{{.phoneNumber}} </div>
+            </div>
+            <div class="col-md-3 contact-line">
+                <img width="33px" src="{{`/icons/mail-red.svg` | absURL}}" alt="">
+                <div class="title h6"> {{i18n "post"}} </div>
+                <div>{{.POBox}}</div>
+            </div>
+
+            {{with .locationOnMap}}
+            <div class="col-12 col-md-12 px-0">
+                <div class="google-map mt-4 mt-md-0"> {{. | markdownify}}</div>
+            </div>
+            {{end}}
+        </div>
+        {{end}}
+    </div>
+</section>
+{{if $contactData.contactPage.contactForm.enable}}
+<section class="contact-form-section">
+    <div class="container">
+        <div class="row justify-content-around animate__animated animate__fadeIn">
+            <div class="col-11 col-lg-4 col-md-5 pt-md-5">
+                {{with $contactData.contactPage.contactForm.title}}
+                <div class="h5 title  fw-semibold ">{{.}}</div>
+                {{end}}
+                {{with $contactData.contactPage.contactForm.subtitle}}
+                <p>{{.}}</p>
+                {{end}}
+
+                {{$imgWebp := partial "image-processor.html" (dict "ImageSrc" $contactData.contactPage.contactForm.image
+                "ImgParam" "webp fit 500x600") . }}
+                <div class="form-img" data-background-image="{{$imgWebp}}">
+                </div>
+            </div>
+            <div animate-data="fadeInBottom" class=" col-md-6 align-self-center">
+                <form method="POST">
+                    <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                        {{i18n "alert-success-message"}}
+                    </div>
+                    <div class="form-group">
+                        <label for="name" hidden>{{ i18n "contact_form_name" }}</label>
+                        <input placeholder={{ i18n "contact_form_name" }} id="name" name="name" type="text"
+                            class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" hidden>{{ i18n "contact_form_email" }}</label>
+                        <input id="email" name="email" type="email" autocomplete="email" class="form-control"
+                            placeholder={{ i18n "contact_form_email" }} required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" hidden>{{ i18n "contact_form_subject" }}</label>
+                        <input id="subject" placeholder={{ i18n "contact_form_subject" }} name="subject" type="text"
+                            class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company" hidden>{{ i18n "contact_form_company" }}</label>
+                        <input id="company" placeholder={{ i18n "contact_form_company" }} name="company" type="text"
+                            class="form-control">
+                    </div>
+                    <label for="message" hidden>{{ i18n "contact_form_message" }}</label>
+                    <textarea placeholder={{ i18n "contact_form_message" }} id="message" name="message"
+                        class="form-control" required></textarea>
+                    <button class="btn btn-primary submit-btn" type="submit">{{ i18n "submit" }}</button>
+                    <div class="form-group-h">
+                        <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{end}}
+{{ end }}

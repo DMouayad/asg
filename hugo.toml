@@ -1,0 +1,182 @@
+################################# Default configuration ###################
+baseURL = "https://areena-saudi-german.pages.dev"
+theme = "show-bis"
+timeZone = "Asia/Riyadh"
+timeout = "200s"
+
+[[module.mounts]]
+source = 'assets'
+target = 'assets'
+
+[[module.mounts]]
+source = 'static/images'
+target = 'assets/images'
+
+[taxonomies]
+service = 'services'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+        unsafe= true
+
+############################# Imaging ##############################
+[imaging]
+quality = 80
+resampleFilter = "Lanczos"
+
+
+################### English Navigation ########################
+[[Languages.en.menu.main]]
+name = "Home"
+pageRef = "/"
+weight = 1
+
+[[Languages.en.menu.main]]
+name = "About"
+pageRef = "/about-us/"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "Services"
+weight = 3
+identifier = "services"
+[[Languages.en.menu.main]]
+name = "Construction"
+pageRef = "/services/construction/"
+weight = 1
+parent = "services"
+
+[[Languages.en.menu.main]]
+name = "MEP Engineering"
+pageRef = "/services/mep-engineering/"
+weight = 2
+parent = "services"
+[[Languages.en.menu.main]]
+name = "Flooring Systems"
+pageRef = "/services/flooring-systems/"
+weight = 3
+parent = "services"
+[[Languages.en.menu.main]]
+name = "Insulation Works"
+pageRef = "/services/insulation-works/"
+weight = 4
+parent = "services"
+[[Languages.en.menu.main]]
+name = "Finishing Works"
+pageRef = "/services/finishing-works/"
+weight = 5
+parent = "services"
+[[Languages.en.menu.main]]
+name = "Concrete Joints and Repairs"
+pageRef = "/services/concrete-joints-and-repairs/"
+weight = 6
+parent = "services"
+
+[[Languages.en.menu.main]]
+name = "Projects"
+pageRef = "/projects/"
+weight = 4
+
+[[Languages.en.menu.main]]
+name = "Contact"
+pageRef = "/contact-us/"
+weight = 5
+
+
+################### Arabic Navigation ########################
+[[Languages.ar.menu.main]]
+name = "الرئيسية"
+pageRef = "/"
+weight = 1
+identifier = "home"
+
+[[Languages.ar.menu.main]]
+name = "من نحن"
+pageRef = "/about-us/"
+identifier = "about"
+weight = 2
+
+[[Languages.ar.menu.main]]
+identifier = "services"
+name = "خدماتنا"
+weight = 3
+[[Languages.ar.menu.main]]
+name = "البناء والإنشاء"
+pageRef = "/services/construction/"
+weight = 1
+parent = "services"
+[[Languages.ar.menu.main]]
+name = "أعمال الالكتروميكانيك والسباكة"
+pageRef = "/services/mep-engineering/"
+weight = 2
+parent = "services"
+[[Languages.ar.menu.main]]
+name = "أنظمة الأرضيات"
+pageRef = "/services/flooring-systems/"
+weight = 3
+parent = "services"
+[[Languages.ar.menu.main]]
+name = "أعمال العزل"
+pageRef = "/services/insulation-works/"
+weight = 4
+parent = "services"
+[[Languages.ar.menu.main]]
+name = "أعمال التشطيبات"
+pageRef = "/services/finishing-works/"
+weight = 5
+parent = "services"
+[[Languages.ar.menu.main]]
+name = "أعمال الخرسانة - الإصلاح والفواصل"
+pageRef = "/services/concrete-joints-and-repairs/"
+weight = 6
+parent = "services"
+
+[[Languages.ar.menu.main]]
+name = "المشاريع"
+pageRef = "/projects/"
+weight = 4
+
+[[Languages.ar.menu.main]]
+name = "تواصل معنا"
+pageRef = "/contact-us/"
+weight = 5
+
+############################# Default Parameters ##########################
+[params]
+logo = "images/logo2.png"
+# Meta data
+author = "Mhd Mouayad"
+enableContactForm = true
+# preloader
+[params.preloader]
+enable = true
+
+
+################################ English Language ########################
+[Languages.en]
+languageName = "EN"
+languageCode = "en"
+contentDir = "content/english"
+
+[Languages.en.params]
+title = "Areena Saudi German"
+description = "Areena Saudi German is a general Contracting Services in Saudi Arabia and Germany; MEP, Construction, Insulation, Finishing works and flooring systems"
+LanguageDirection = "ltr"
+copyright = "Areena Saudi German"
+isArabic = false
+fontLink = 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap'
+
+################################ Arabic Language ########################
+[Languages.ar]
+languageName = "العربية"
+languageCode = "ar"
+contentDir = "content/arabic"
+
+[Languages.ar.params]
+title = "أرينا السعودية الألمانية"
+description = "أرينا السعودية الألمانية للمقاوت العامة تقدم الخدمات الالكتروميكانيكية والسباكة، أعمال البناء، أعمال العزل المائي وتركيب الأرضيات"
+LanguageDirection = "rtl"
+isArabic = true
+copyright = "شركة أرينا السعودية الألمانية"
+fontLink = 'https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap'

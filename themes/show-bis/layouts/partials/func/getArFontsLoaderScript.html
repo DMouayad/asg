@@ -1,0 +1,2 @@
+{{ $fontLoader := resources.Get "js/loadArabicFonts.js" | minify | fingerprint "sha256"}}
+{{ return $fontLoader}}

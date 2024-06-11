@@ -1,0 +1,65 @@
+<section class="partners-home-section ">
+    <div class="h3 section-title text-center" animate-data="fadeInUp">{{i18n "our-partners"}}</div>
+    <div id="partnersCarousel" class="d-block d-lg-none carousel slide" data-bs-theme="dark" data-bs-ride="false"
+        data-bs-pause="false">
+        <div class="carousel-indicators">
+            {{range seq (len site.Data.partners.slides)}}
+            <button type="button" data-bs-target="#partnersCarousel" data-bs-slide-to="{{math.Add . -1}}" {{if eq . 1}}
+                class="active" aria-current="true" {{end}} aria-label="Slide {{.}}"></button>
+            {{end}}
+        </div>
+        <div class="container-fluid  gx-0">
+            <div class="row md-row justify-content-between  ">
+                <div class="col-12 px-0 px-lg-4 ">
+                    <div class="carousel-inner">
+                        {{range $index, $el := site.Data.partners.slides }}
+                        <div class="carousel-item {{if eq $index 0}} active {{end}}">
+                            <div class="row justify-content-around align-items-center">
+                                {{range .items}}
+                                {{if .isLarge}}
+                                {{ $imgWebp := partial "remote-img-processor.html" (dict "ImageSrc" .img "ImgParam"
+                                "webp q90 resize 350x")}}
+                                <div class="col-6 col-lg-2 col-md-3 col-sm-6 px-sm-0">
+                                    <div class="card" data-background-image="{{$imgWebp}}"></div>
+                                </div>
+                                {{else}}
+                                {{ $imgWebp := partial "remote-img-processor.html" (dict "ImageSrc" .img "ImgParam"
+                                "webp q90 resize x150")}}
+                                <div class="col-4 col-lg-2 col-md-2  col-sm-4 px-sm-0">
+                                    <div class="card-sm" data-background-image="{{$imgWebp}}"></div>
+                                </div>
+                                {{end}}
+                                {{end}}
+                            </div>
+                        </div>
+                        {{end}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-none d-lg-block">
+        <div class="container gx-lg-5 px-5">
+            <div class="row pt-5 justify-content-around align-items-center">
+                {{range $index, $el := site.Data.partners.slides }}
+                {{range .items}}
+                {{if .isLarge}}
+                {{ $imgWebp := partial "remote-img-processor.html" (dict "ImageSrc" .img "ImgParam"
+                "webp q90 resize 350x")}}
+                <div animate-data="fadeInBottom" style=" --delay:{{$index}};" class="mb-5 mx-3 col-lg-2">
+                    <div class="card" data-background-image="{{$imgWebp}}"></div>
+                </div>
+                {{else}}
+                {{ $imgWebp := partial "remote-img-processor.html" (dict "ImageSrc" .img "ImgParam"
+                "webp resize x150")}}
+                <div animate-data="fadeInBottom" class="mb-5 x-2 col-lg-2">
+                    <div class="card-sm" data-background-image="{{$imgWebp}}"></div>
+                </div>
+                {{end}}
+                {{end}}
+                {{end}}
+            </div>
+        </div>
+    </div>
+</section>

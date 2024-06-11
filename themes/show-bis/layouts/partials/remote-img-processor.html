@@ -1,0 +1,20 @@
+{{ $imageURL := "/images/placeholder.png" }}
+
+{{/* Step 2: now check if passed image exists with same as title */}}
+{{ $img_param := or .ImgParam "webp" }}
+
+{{ with resources.GetRemote .ImageSrc }}
+{{ with .Err }}
+{{ errorf "%s" . }}
+{{ errorf "%s" $.ImageSrc }}
+{{else}}
+{{if eq .MediaType.SubType "svg"}}
+{{$imageURL = .RelPermalink}}
+{{else}}
+{{ $image := (.).Process $img_param }}
+{{ $imageURL = $image.RelPermalink }}
+{{end}}
+{{end}}
+{{end}}
+
+{{return $imageURL}}

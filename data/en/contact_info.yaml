@@ -1,0 +1,33 @@
+socials:
+  enable: true
+  items:
+  - link: https://instagram.com/
+    icon: /icons/instagram.svg
+    desc: Areena Saudi German page on Instagram
+
+  - link: https://x.com/
+    icon: /icons/x-twitter.svg
+    desc: Areena Saudi German page on X(Twitter)
+ksaOfficesSectionTitle: Our offices in the Kingdom of Saudi Arabia
+ksaOffices:
+- officeName: KSA Head Office
+  phoneNumber: +966 112 111 640
+  address: Anas Ibn Malik Rd, Riyadh
+  locationOnMap: <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7242.221378143235!2d46.656014!3d24.825888!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ5JzMzLjIiTiA0NsKwMzknMzAuOSJF!5e0!3m2!1sen!2snl!4v1717420863481!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  POBox: P.O BOX 395180, Riyadh 11375
+  useInFooter: true
+
+germanyOffices:
+- officeName: Germany Head Office
+  phoneNumber: +49 172 918 3910
+  address:  Wilhelmstr.30, 47169 Duisburg
+  useInFooter: true
+
+contactPage:
+  image: /images/phone-2.png
+  subtitle: Reach out to us with any questions or ideas you have, we're always happy to help
+  contactForm:
+    image: /images/email.jpg
+    title: Get in touch now
+    subtitle: Use this form to send us a message right away.
+    enable: true

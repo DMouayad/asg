@@ -1,0 +1,13 @@
+{{ $image := "/images/placeholder.png" }}
+
+{{/* Step 2: now check if passed image exists with same as title */}}
+{{ $image_url := resources.Get .ImageSrc }}
+{{ $img_param := or .ImgParam "webp" }}
+
+{{ if $image_url }}
+{{/* Resize and convert the image */}}
+{{ $processedImg := $image_url.Process $img_param }}
+{{ $image = $processedImg.RelPermalink }}
+{{end}}
+
+{{return $image}}

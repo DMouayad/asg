@@ -1,0 +1,10 @@
+{{
+$css_options := dict "targetPath" "css/critical-style.css" "enableSourceMap" (not hugo.IsProduction)
+}}
+
+{{ $style := resources.Get "scss/critical-style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS
+$css_options }}
+{{ if hugo.IsProduction }}
+{{ $style = $style | minify | fingerprint "sha256"}}
+{{ end }}
+{{return $style}}

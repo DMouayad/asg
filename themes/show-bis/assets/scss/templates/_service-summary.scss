@@ -1,0 +1,117 @@
+.ts-service-box {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    height: 350px;
+    border-radius: 8px;
+    margin-right: 3px;
+    overflow: hidden;
+    width: 100%;
+
+    @media (max-width:600px) {
+        margin: 22px;
+        width: auto;
+        height: 280px;
+
+        .view-projects-link {
+            font-size: 15px;
+        }
+
+        .service-box-title a {
+            font-size: 19px;
+        }
+
+    }
+
+    .view-projects-link {
+        position: absolute;
+        bottom: 7%;
+        left: 6%;
+        font-weight: 700;
+        width: max-content;
+        text-align: center;
+        border-radius: 8px;
+        padding: 8px 16px;
+        color: white;
+        background-color: transparent;
+        border: 1px solid;
+        text-shadow: #091a10 0px 0px 10px;
+        transform: translateY(100px);
+        transition: .5s;
+
+        @media (max-width:800px) {
+            display: block;
+            transform: translateY(0);
+        }
+    }
+
+    &:hover {
+        .view-projects-link {
+            transform: translateY(0);
+            left: 10%;
+        }
+
+        .service-box-title {
+            left: 10%;
+            bottom: 25%;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-blend-mode: color;
+        background-color: #24824833;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.service-box-title {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    font-weight: 700;
+    color: #fcfcfc;
+    letter-spacing: normal;
+    text-shadow: #09180f 0px 0px 10px;
+    transition: .5s;
+
+    @media (max-width:800px) {
+        bottom: 26%;
+        left: 6%;
+    }
+
+    a {
+        font-size: 24px;
+    }
+}
+
+
+
+.ar-typography {
+    .ts-service-box {
+        .view-projects-link {
+            left: 0;
+            right: 8%;
+        }
+
+        .service-box-title {
+            left: auto;
+            right: 8%;
+        }
+
+        @media (max-width:800px) {
+            .view-projects-link {
+                left: 0;
+                right: 10%;
+            }
+
+            .service-box-title {
+                right: 10%;
+                left: 0;
+            }
+        }
+    }
+}

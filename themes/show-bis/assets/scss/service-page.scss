@@ -1,0 +1,162 @@
+@import "common-non-critical-style.scss";
+@import "project-card.scss";
+@import "templates/projects-slider";
+
+
+.service-page {
+  padding: 0;
+  padding-top: 90px;
+
+  @include mobile-xs {
+    padding-top: 70px;
+  }
+}
+
+.page-bg {
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: grid;
+  align-items: center;
+
+  @include mobile {
+    background-size: 110% 350px;
+    background-repeat: no-repeat;
+    padding: 0;
+    height: 270px;
+    max-height: 30vh;
+  }
+
+  .h1 {
+    color: white;
+    text-shadow: #0e0e0ed2 0px 4px 12px;
+    border-bottom: 4px solid;
+    padding-bottom: 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0000004f;
+  }
+}
+
+.service-page {
+
+  .subtitle {
+    position: absolute;
+    left: 28px;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    color: $on-background-color;
+    color: #fcfcfc;
+  }
+}
+
+
+.service-page {
+  p {
+    line-height: 28px;
+
+    @include mobile {
+      font-size: 15px;
+    }
+  }
+}
+
+.service-page .projects-section {
+  .title {
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    padding-bottom: 6px;
+    font-weight: 700;
+    color: $on-background-color;
+  }
+}
+
+.service-page {
+  li {
+    line-height: 30px;
+    font-weight: 500;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}
+
+
+.list-carousel .projects-slider-list .project-slider-item .project-card .project-caption {
+  @media (min-width:600px) {
+    min-height: 80%;
+    justify-content: space-evenly;
+  }
+
+  @media (min-width:1200px) {
+    min-height: 160px;
+  }
+}
+
+
+.other-services-list {
+  background-color: $dark-bg;
+  padding: 25px 10%;
+
+  .title {
+    width: fit-content;
+    color: #fcfcfc
+  }
+
+  .service-li {
+    margin: 0 8px;
+    padding: 9px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .4s;
+    background-color: white;
+
+    &:hover {
+      background-color: $orange-yellowish;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    padding: 20px;
+    overflow-x: scroll;
+    justify-content: start;
+
+    .service-li {
+      min-height: 60px;
+      min-width: fit-content;
+    }
+  }
+
+  @include mobile {
+    .title {
+      min-width: fit-content;
+    }
+
+    .service-li {
+      padding: 5% 10px;
+    }
+
+  }
+}
+
+.related-projects-sec {
+  padding: 70px 20px;
+
+  @include mobile {
+    padding-top: 30px;
+
+  }
+}

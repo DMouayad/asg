@@ -1,0 +1,55 @@
+{{ define "main" }}
+{{ $projectImagesObj := ""}}
+{{range first 1 (where site.Data.projects_imgs.list "title" .File.BaseFileName)}}
+{{$projectImagesObj = . }}
+{{end}}
+<section class="project-details-section">
+    {{ $imgWebp := "" }}
+    {{if $projectImagesObj}}
+    {{ $imgWebp = partial "image-processor.html" (dict "ImageSrc" $projectImagesObj.thumbnailImage "ImgParam"
+    "webp fit 1920x1080")}}
+    {{end}}
+    <div class=" main-image animate__animated animate__zoomIn animate__fast" data-background-image="{{$imgWebp}}">
+    </div>
+
+    <div class="project-info-card animate__animated animate__fadeInUp">
+        <div class=" projects-link h6"> <a href="{{absLangURL `projects/`}}">{{ i18n "projects" }}</a>
+            /</div>
+        <div class=" h3 project-name">{{ .Title }}</div>
+        {{with .Params.Location}}
+        <div class="subtitle h6">{{i18n "project-location"}}</div>
+        <div>{{.}}</div>
+        <br>
+        {{end}}
+        {{with .Params.projectDesc}}
+        <div>
+            <div class="subtitle h6">{{i18n "work-details"}}</div>
+            <ul class="details-list">
+                {{range .}}
+                {{if .ProvidedWork}}
+                <li class="detail-card">{{.ProvidedWork}}</li>
+                {{end}}
+                {{end}} <!-- project desc range end -->
+            </ul>
+        </div>
+        {{end}}
+    </div>
+</section>
+{{if $projectImagesObj}}
+{{if $projectImagesObj.images}}
+<section id="project-imgs-sec" class="projects-imgs-sec">
+    {{partial "project-page/project-images.html" (dict "images" $projectImagesObj.images) .}}
+</section>
+{{end}}
+{{end}}
+<section class="related-projects-sec">
+    {{ $projects := where .Site.RegularPages "Type" "projects"}}
+    {{ $services := .Params.services }}
+    {{ $projects = where $projects "Params.services" "intersect" $services}}
+    {{ $projects = where $projects "Params.title" "ne" .Title}}
+    {{with (shuffle $projects)}}
+    {{partial "projects-slider.html"
+    (dict "projects" (first 6 .) "sliderTitle" (i18n "related-projects")) . }}
+    {{end}}
+</section>
+{{ end }}

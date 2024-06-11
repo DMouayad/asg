@@ -1,0 +1,26 @@
+{{$ariaLabel := print "Go to " "'" $.Title "'" " project page"}}
+{{$link := $.Permalink}}
+
+{{$imgURL := "images/placeholder.jpg"}}
+
+{{range first 1 (where site.Data.projects_imgs.list "title" .File.BaseFileName)}}
+{{$imgURL = .thumbnailImage }}
+{{end}}
+
+{{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" $imgURL "ImgParam"
+"webp resize 500x350")}}
+
+<div class="project-card" data-background-image="{{$imgWebp}}">
+    <div class="project-caption">
+
+        <a aria-label="{{$ariaLabel}}" href="{{.Permalink}}">
+            <div class="flex-fill mb-5 mb-md-0">
+                <div class="h5"> {{ .Title }}</div>
+                <p class="fw-normal  mb-0">{{ .Params.location }}</p>
+            </div>
+        </a>
+        <a class="view-project-btn" aria-label="{{$ariaLabel}}" href=" {{ .Permalink }}">
+            {{i18n "view-project"}} ></a>
+    </div>
+
+</div>

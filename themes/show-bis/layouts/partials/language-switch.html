@@ -1,0 +1,9 @@
+{{ if .Site.Params.isArabic}}
+
+{{$pageEnglishUrl := replace .Permalink "ar/" ""}}
+<a class="lang-switch" href="{{ $pageEnglishUrl }}">English</a>
+
+{{ else }}
+{{$pageArabicURL := urls.JoinPath site.BaseURL "ar" (relURL .Permalink) }}
+<a class="lang-switch fw-bold ar-typography" href="{{$pageArabicURL}}">العربية</a>
+{{ end }}

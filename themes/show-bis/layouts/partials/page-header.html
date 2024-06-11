@@ -1,0 +1,10 @@
+{{ $imgURL := "images/bg2.jpg"}}
+{{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" $imgURL "ImgParam" "webp q70 resize x600")}}
+<div class="page-banner" data-background-image="{{$imgWebp}}"></div>
+<section class="page-title pb-0">
+    <div class="d-flex flex-column align-items-center ">
+        <div class="h2 section-title text-uppercase text-center ">{{ .Title }}</div>
+        {{partial "home-link.html" .}}
+
+    </div>
+</section>

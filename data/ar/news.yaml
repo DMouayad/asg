@@ -1,0 +1,12 @@
+enable: true
+sectionTitle: أخبارنا
+items:
+  - title: 
+    content: نحن بصدد التعاقد مع مكتب استشاري وتصميمي في ألمانيا الإتحادية.
+    image: /images/news/german-flag.jpg
+  - title: اكتشاف آفاق جديدة 
+    content: تخطو شركة أرينا السعودية الألمانية خطوة مهمة في عالم الرياضة، حيث نستعد للحصول على شهادة اعتماد من الاتحاد الدولي لكرة القدم FIFA.
+    image: /images/news/field.jpg
+  - title: فرص عمل جديدة
+    content: 
+    image: /images/news/jop-app.jpg

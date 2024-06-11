@@ -1,0 +1,33 @@
+introImage: /images/arc-design.jpg
+imagesOnDifferentSides: true
+sections:
+- title: History
+  isDarkBackground: true
+  image: /images/h3.png
+  paragraphs:
+  - title:
+    content: Established in 2013 by a team of construction experts and consultants to deliver high-quality construction services in the Kingdom of Saudi Arabia.
+  - title:
+    content: In 2016, a team of specialized German engineers embarked a new mission for SAG in Dusseldorf, Germany, focusing on the construction, maintenance and renovation works, in addition to contracting services for the industrial sector.
+  - title:
+    content: From the start, we established our core foundations & standards to be of the highest quality and craftsmanship. Our collaborative teams of engineers, administrators, consultants and workers ensure projects are completed within the specified time-frame, meeting requirements and achieving the highest customer satisfaction.
+  
+- title: The Present
+  image: /images/projects/alfaisaliya-tower/01.jpg
+  paragraphs:
+  - title:
+    content: Over the years, Areena Saudi German has proven its ability to deliver on any project, regardless of size or complexity while overcoming any challenges that arise.
+  - title:
+    content: Through our demonstrated work, we earned a pioneering position in the field of Flooring Systems, Insulation & Waterproof Solutions. In addition, we are further qualified by ISO certifications in the latter scopes by Intercert.
+
+statements:
+  sectionTitle: Our Company's
+  list:
+  - title: Mission
+    content: Since our beginning 10 years ago, we still hold QA\QC at the highest standards in all types of services we provide to our customers
+  - title: Vision
+    content: To be a leader in KSA & GCC construction sector by leveraging our expertise in balancing cost control, quality service delivery, and efficient project execution
+  - title: Goal
+    content: We aim to constantly improve our teams qualifications throughout annual programs following latest training technologies and working with best workforce
+  - title: Policies
+    content: We implement multiple policies including those for Safety, QA\QC Inspection, Customer Relation Management and Feedback Collection.

@@ -1,0 +1,197 @@
+- id: home
+  translation: Home
+- id: areena
+  translation: AREENA
+- id: saudi
+  translation: Saudi
+- id: GE
+  translation: GE
+- id: RM
+  translation: RM
+- id: AN
+  translation: AN
+- id: or
+  translation: Or
+- id: loading
+  translation: Loading...
+- id: learn-more
+  translation: Learn More
+- id: view-projects
+  translation: View Projects
+- id: learnMore
+  translation: Learn More about our
+- id: language
+  translation: Language
+- id: for-general-contracting
+  translation: For General Contracting
+- id: commercial
+  translation: Commercial
+- id: government
+  translation: Government
+- id: healthcare
+  translation: Healthcare
+- id: infrastructure
+  translation: Infrastructure
+- id: our-locations
+  translation: Our Locations
+- id: our-offices
+  translation: Our Offices
+- id: other-services
+  translation: Other Services
+- id: follow-us
+  translation: Follow Us On
+- id: alert-success-message
+  translation: Your message was sent successfully.
+- id: contact-info
+  translation: Contact Info
+- id: useful-links
+  translation: Useful Links
+- id: about-us
+  translation: About Us
+- id: contact-us
+  translation: Contact Us
+- id: our-projects
+  translation: Our Projects
+- id: our-services
+  translation: Our Services
+- id: services
+  translation: Services
+- id: projects
+  translation: Projects
+- id: our-partners
+  translation: Our Partners In Success
+- id: ksa
+  translation: KSA
+- id: germany
+  translation: Germany
+- id: view-on-map
+  translation: View On Map
+- id: more
+  translation: More
+- id: our-principals
+  translation: Our Principals
+- id: short-summary
+  translation: About Us
+- id: of
+  translation: Of
+- id: company-name
+  translation: Areena Saudi German
+- id: welcome-msg
+  translation: Welcome To
+- id: quality-section-2
+  translation: We achieved multiple ISO certifications
+- id: quality-section-3
+  translation: in the scope of construction, MEP works, Industrial Flooring Systems and Waterproof & Insulation works
+- id: iso-certifications
+  translation: ISO Certifications
+- id: international-standards
+  translation: international standards
+- id: read-also
+  translation: Read also
+- id: mission
+  translation: Mission
+- id: vision
+  translation: Vision
+- id: our-vision
+  translation: Our Vision
+- id: history
+  translation: History
+- id: our-history
+  translation: Our History
+- id: policies
+  translation: Policies
+- id: goal
+  translation: Goal
+- id: quality-commitment
+  translation: Our Commitment to quality & performance
+- id: view-all
+  translation: View All
+- id: contact_form_name
+  translation: Full Name
+- id: contact_form_email
+  translation: Email Address
+- id: contact_form_subject
+  translation: Subject
+- id: contact_form_message
+  translation: Tell us what we can do for you
+- id: contact_form_company
+  translation: Company
+- id: contact_form_dept
+  translation: Department
+- id: submit
+  translation: Send
+- id: germany-office
+  translation: Germany Head Office
+- id: ksa-office
+  translation: KSA Head Office
+- id: address
+  translation: Address
+- id: tel
+  translation: Phone No.
+- id: post
+  translation: P.O Box
+- id: ceo-letter-title
+  translation: Letter From the CEO
+- id: ceo-name
+  translation: Mazen Salah Alddin Al-Ayoubi
+- id: ceo-letter
+  translation: In today's era of globalization, the world has shrunk to a small village where quality reigns supreme and competition among companies has increased with the increasing expectations of customers for the quality of services they receive.
+- id: ceo-letter-2
+  translation: Recognizing this shift, Areena Saudi German has been a pioneer in elevating the quality of its services by implementing QA\QC and prioritizing customer satisfaction with evaluation and monitoring process. This comes in line with the company's guiding principal of "gaining trust through work ethics and honesty".
+- id: project-details
+  translation: Project Details
+- id: project-client
+  translation: Client(Owner)
+- id: project-location
+  translation: Location
+- id: project-execution-period
+  translation: Execution Period
+- id: project-contract-value
+  translation: Contract Value
+- id: all
+  translation: All
+- id: some-projects
+  translation: Our Projects
+- id: view-recent-projects
+  translation: View Recent Projects
+- id: related-projects
+  translation: Related Projects
+- id: view-all-projects
+  translation: View All Projects
+- id: featured-projects
+  translation: Featured Projects
+- id: view-project
+  translation: View Project
+- id: home-projects-section-desc
+  translation: Explore our portfolio of projects to know us better and discover what we can do for you.
+- id: general-contracting
+  translation: General Contracting
+- id: view-details
+  translation: View Details
+- id: work-details
+  translation: Work Details
+- id: categories
+  translation: Work Category
+- id: view-more
+  translation: View more
+- id: view-less
+  translation: View less
+- id: explore-services
+  translation: Explore All Services
+- id: view-our-work
+  translation: View our work in the project of
+- id: project-gallery
+  translation: Photos Gallery
+- id: contact-by-email
+  translation: Through Email
+- id: contact-us-desc
+  translation: Use the following form to send us a message or contact us using the details below, We're always happy to help.
+- id: about-service
+  translation: Service Details
+- id: our-latest-news
+  translation: Latest News
+- id: details
+  translation: Details
+- id: learn-about-service
+  translation: View service details
+

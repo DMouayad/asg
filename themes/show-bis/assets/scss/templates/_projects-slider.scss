@@ -1,0 +1,139 @@
+.carousel-block {
+    height: 430px;
+
+    .carousel {
+        width: 100%;
+
+        @media (max-width:600px) {
+            .project-card {
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+.projects-slider-title {
+    display: flex;
+    flex-direction: row;
+    color: $on-background-color;
+    padding: 0 20px;
+    align-items: center;
+    margin-bottom: 26px;
+
+    @media (min-width: 1000px) {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 30px;
+        flex-wrap: nowrap;
+
+        .carousel-btns {
+            width: 100%;
+        }
+    }
+
+    @media (max-width:900px) {
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
+.list-carousel {
+    .carousel {
+        overflow: hidden;
+    }
+}
+
+.projects-slider-list {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+
+    .project-slider-item {
+        overflow: hidden;
+        width: 33%;
+        max-width: 300px;
+        height: 330px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+        .project-card {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+
+    @media (max-width:1000px) {
+        flex-wrap: wrap;
+
+        .projects-slider-title {
+            width: 100%;
+        }
+
+        .project-slider-item {
+            width: 30%;
+            height: 300px;
+        }
+    }
+}
+
+
+.carousel-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+    margin-top: 10px;
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        position: relative;
+        background-color: $dark-green-color;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        background-color: $orange-yellowish;
+        border-radius: 50%;
+        opacity: 0.9;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 21px;
+        height: 21px;
+    }
+
+    @media (max-width:1100px) {
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    @include mobile {
+        // width: 100%;
+        max-width: 400px;
+        margin-top: 26px;
+
+    }
+}
+
+.ar-typography {
+    .carousel-btns {
+        flex-direction: row-reverse;
+    }
+}
+
+.projects-slider-list .project-slider-item .project-card .project-caption {
+    flex-direction: column;
+    left: 7%;
+    right: 7%;
+    align-items: start;
+    min-height: 170px;
+    bottom: 4%;
+}

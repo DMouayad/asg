@@ -1,0 +1,68 @@
+services:
+- name: construction
+  icon: /icons/construction.svg
+  description:
+  subServices:
+    - name: Excavation and migration
+      image: /images/services/construction/excavation.jpg
+    - name: Surveying
+      image: /images/services/construction/surveying.jpg
+    - name: Reinforced Concrete
+      image: /images/services/construction/reinforced-concrete.jpg
+    - name: Casting & Molding
+      image: /images/services/construction/casting-molding-concrete.jpg
+
+- name: mep-engineering
+  icon: /icons/mep.svg
+  description:
+  subServices:
+    - name: HVAC Systems
+      image: /images/services/mep-engineering/hvac.jpg
+    - name: Fire Suppression
+      image: /images/services/mep-engineering/mechanical.jpg
+    - name: Plumbing Works
+      image: /images/services/mep-engineering/plumbing.jpg
+
+- name: flooring-systems
+  icon: /icons/flooring.svg
+  description:
+  subServices:
+    - name: Epoxy Flooring
+      image: /images/services/flooring-systems/epoxy.jpg
+    - name: Self-leveling Vinyl Flooring
+      image: /images/services/flooring-systems/vinyl.jpg
+    - name: Industrial Floors
+      image: /images/services/flooring-systems/1.jpg
+
+- name: insulation-works
+  icon: /icons/insulation.svg
+  description:
+  subServices:
+    - name: Thermal Insulation
+      image: /images/services/insulation-works/insulation2.jpg
+    - name: Waterproof Insulation
+      image: /images/services/insulation-works/insulation1.jpg
+
+- name: finishing-works
+  icon: /icons/finishing.svg
+  description:
+  subServices:
+    - name: Gypsum Board
+      image: /images/services/finishing-works/gypsum-board.jpg
+    - name: Painting
+      image: /images/services/finishing-works/painting.jpg
+    - name: Interior Decor
+      image: /images/services/finishing-works/decor.jpg
+    - name: Tiling
+      image: /images/services/finishing-works/tiling2.jpg
+
+- name: concrete-joints-and-repairs
+  icon: /icons/concrete-repairs.svg
+  description:
+  subServices:
+    - name: Expansion Joints
+      image: /images/services/concrete-works/expansion-joints.jpg
+    - name: Full Repairs
+      image: /images/services/concrete-works/concrete-repairs.jpg
+
+_template: contracting_services

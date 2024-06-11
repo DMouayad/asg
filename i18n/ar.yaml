@@ -1,0 +1,183 @@
+- id: home
+  translation: الرئيسية
+- id: areena
+  translation: أريـــــــــنــا
+- id: saudi
+  translation: السـعوديـة
+- id: GE
+  translation: الأ
+- id: RM
+  translation: لـمـا
+- id: AN
+  translation: نـيـة
+- id: loading
+  translation: جار التحميل...
+- id: learn-more
+  translation: معرفة المزيد
+- id: learn-about
+  translation: اعرف المزيد عن خدماتنا في
+- id: learnMore
+  translation: اعرف المزيد عن خدماتنا في
+- id: view-projects
+  translation: استعراض المشاريع
+- id: language
+  translation: اللغة
+- id: for-general-contracting
+  translation: للمقاولات العامــة
+- id: follow-us
+  translation: تابعونا على
+- id: commercial
+  translation: التجاري
+- id: government
+  translation: الحكومي
+- id: healthcare
+  translation: الصحي
+- id: infrastructure
+  translation: البنى التحتية
+- id: maintenance-works
+  translation: أعمال الصيانة والإصلاحات
+- id: other-services
+  translation: خدماتنا الأخرى
+- id: our-offices
+  translation: مكاتبنا
+- id: our-locations
+  translation: مكاتبنا
+- id: contact-info
+  translation: معلومات التواصل
+- id: useful-links
+  translation: روابط مفيدة
+- id: about-us
+  translation: من نحن
+- id: more
+  translation: المزيد
+- id: welcome-msg
+  translation: مرحباً بكم في واحة خيرات
+- id: more-about-us
+  translation: المزيد عن الشركة
+- id: our-principals
+  translation: مبادئنا
+- id: short-summary
+  translation: لمحة تعريفية
+- id: about-summary-1
+  translation: تأسست أرينا السعودية الألمانية في عام 2013، وهي شركة رائدة في مجال المقاولات للخدمات الإنشائية في المملكة العربية السعودية وهي متواجدة أيضاً في ألمانيا الإتحادية.
+- id: about-summary-2
+  translation: نسعى للحفاظ على رضا عملائنا من خلال المتابعة الدائمة لعمليات التنفيذ وضمان اتّباعها معايير الجودة العالمية بغض النظر عن حجم المشروع أو التحدّيات المرافقة.
+- id: quality-section-1
+  translation: انطلاقاً من
+- id: quality-section-2
+  translation: حصلنا بفضل اللّه على عدّة شهادات آيزو
+- id: quality-section-3
+  translation: في مجال أعمال البناء والالكتروميكانيك وأنظمة الأرضيات الصناعية وأعمال العزل والعزل المائي
+- id: iso-certifications
+- id: contact-us
+  translation: اتصل بنا
+- id: company-name
+  translation: أرينا السعودية الألمانية
+- id: our-services
+  translation: خدماتنا
+- id: service-card-instruction
+  translation: أو اضغط على اسم الخدمة لعرض التفاصيل
+- id: or
+  translation: أو
+- id: services
+  translation: خدمات
+- id: projects
+  translation: المشاريع
+- id: our-partners
+  translation: شركائنا في النجاح
+- id: our-projects
+  translation: مشاريعنا
+- id: ksa
+  translation: السعودية
+- id: germany
+  translation: ألمانيا
+- id: view-on-map
+  translation: عرض الموقع على الخريطة
+- id: read-also
+  translation: اقرأ أيضاً
+- id: history
+  translation: تاريخنا
+- id: our-history
+  translation: تاريخنا
+- id: quality-commitment
+  translation: التزامنا بمعايير الجودة والأداء
+- id: view-all
+  translation: عرض الكل
+- id: contact_form_name
+  translation: الاسم الكامل
+- id: contact_form_email
+  translation: البريد الالكتروني
+- id: contact_form_subject
+  translation: الموضوع
+- id: contact_form_message
+  translation: أخبرنا كيف يمكننا مساعدتك
+- id: contact_form_company
+  translation: اسم الشركة
+- id: contact_form_dept
+  translation: Department
+- id: submit
+  translation: ارسال
+- id: address
+  translation: العنوان
+- id: tel
+  translation: الهاتف
+- id: post
+  translation: صندوق مكتب البريد
+- id: ceo-letter-title
+  translation: رسالة المدير التنفيذي
+- id: ceo-name
+  translation: مازن صلاح الدين الأطرش الأيوبي
+- id: ceo-letter
+  translation: في عصر العولمة الحالي، بات العالم أشبه بقرية صغيرة تزايد فيها تنافس الشركات بتزايد توقعات العملاء حول جودة الخدمات التي يتلقونها.
+- id: ceo-letter-2
+  translation: إدراكأ منا لهذا التحول، كانت أرينا السعودية الألمانية سباقةً إلى رفع سوية الخدمات المقدمة من خلال تطبيق ضبط ومراقبة الجودة وقياس مستوى رضى العملاء، ويأتي هذا ترسيخاً لميثاق الشركة  "كسب الثقة من خلال أخلاقيات العمل وأمانة التكليف".
+- id: project-details
+  translation: تفاصيل المشروع
+- id: project-client
+  translation: المالك
+- id: project-location
+  translation: الموقع
+- id: project-execution-period
+  translation: مدة التنفيذ
+- id: project-contract-value
+  translation: قيمة العقد
+- id: all
+  translation: الكل
+- id: some-projects
+  translation: بعض مشاريعنا
+- id: view-recent-projects
+  translation: عرض أحدث المشاريع
+- id: related-projects
+  translation: مشاريع ذات صلة
+- id: view-all-projects
+  translation: استعراض كافة المشاريع
+- id: featured-projects
+  translation: مشاريع مميزة
+- id: view-project-details
+  translation: استعراض تفاصيل مشروع
+- id: view-project
+  translation: استعراض المشروع
+- id: general-contracting
+  translation: المقاولات العامة
+- id: view-details
+  translation: عرض التفاصيل
+- id: work-details
+  translation: تفاصيل العمل المنجز
+- id: categories
+  translation: التصنيفات
+- id: view-more
+  translation: عرض المزيد
+- id: view-less
+  translation: عرض عناصر أقل
+- id: explore-services
+  translation: اكتشف خدماتنا
+- id: project-gallery
+  translation: معرض الصور
+- id: about-service
+  translation: لمحة عامة
+- id: our-latest-news
+  translation: أخبارنا
+- id: details
+  translation: التفاصيل
+- id: learn-about-service
+  translation: استعراض التفاصيل

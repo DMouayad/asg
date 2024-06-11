@@ -1,0 +1,74 @@
+{{ define "main" }}
+{{$aboutData := (index site.Data site.Language.Lang).about_page}}
+{{ $introImg := "" }}
+{{with $aboutData.introImage}}
+{{ $introImg = partial "image-processor.html" (dict "ImageSrc" . "ImgParam" "webp resize 1920x1080")}}
+{{end}}
+<div class="intro-img" {{if $introImg}} data-background-image="{{$introImg}}" {{end}}>
+  <section class="about-page-title ">
+    <div class="title-col d-flex flex-column align-items-center justify-content-center ">
+      <div class="h1 section-title text-center ">{{ .Title }}</div>
+    </div>
+  </section>
+</div>
+{{range $index, $el := $aboutData.sections}}
+{{ $evenIndex := modBool $index 2 }}
+
+{{ $imageOnLeft := true}}
+{{with $aboutData.imagesOnDifferentSides}}
+{{$imageOnLeft = and . $evenIndex}}
+{{end}}
+<section class="about-section {{if .isDarkBackground}} dark-section {{end}}">
+  <div class="container">
+    <div class="row justify-content-around">
+
+      {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" .image "ImgParam" "webp resize 500x")}}
+      {{if $imageOnLeft}}
+      <div class="img-col col-md-5 col-10 animate__animated animate__zoomIn" data-background-image="{{$imgWebp}}">
+        <div class=" title-col  ">
+          <div class=" h1 fw-semibold ">{{.title}}</div>
+        </div>
+      </div>
+      {{end}}
+      <div class="content-col col-md-5 col-10 align-self-center">
+        {{range .paragraphs}}
+        {{with .title}}
+        <div class="h6">{{.}}</div>
+        {{end}}
+        {{with .content}}
+        <p>{{.}}</p>
+        {{end}}
+        {{end}}
+      </div>
+      {{ if not $imageOnLeft}}
+      <div class="img-col col-md-5 col-10 animate__animated animate__zoomIn" data-background-image="{{$imgWebp}}">
+        <div class="title-col ">
+          <div class=" h1 fw-semibold ">{{.title}}</div>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+{{end}}
+<!-- Main container end -->
+<section id="principals" class="company-foundations ">
+  {{with $aboutData.statements.sectionTitle}}
+  <h1 class="title h3 fw-semibold  text-center" animate-data="fadeInUp">{{.}}</h1>
+  {{end}}
+  <div class="container">
+
+    <div class="row justify-content-around " animate-data="fadeInBottom">
+      {{range $aboutData.statements.list}}
+      <div class="col-md-5 col-lg-4">
+        <div class="about-box">
+          <div class="h5 fw-semibold ">{{.title}}</div>
+          <p class="about-box-desc"> {{.content}}</p>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+
+</section>
+{{end}}

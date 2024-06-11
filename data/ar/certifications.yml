@@ -1,0 +1,24 @@
+items:
+  - title: نظام إدارة الجودة
+    link: https://www.intercert.com/services/management-system-certifications/iso-9001-2015
+    image: https://www.intercert.com/upload_images/ISO-9001.png
+    image_alt: من قبل شركة انترسيرت ISO-9001:2015 شهادة
+    description:  
+      - text: مستوى ثابت من الجودة والأداء.
+      - text: الالتزام بتلبية متطلبات الزبائن.
+
+  - title: نظام إدارة السلامة والصحة المهنية
+    link: https://www.intercert.com/services/management-system-certifications/iso-45001-2018
+    image: https://www.intercertcertification.hu/wp-content/uploads/2020/02/45001-Mark-E.png
+    image_alt: من قبل شركة انترسيرت ISO-45001:2018 شهادة
+    description:
+      - text: مراقبة وتقييم وإدارة مخاطر مكان العمل المتعلقة بالسلامة والصحة المهنية
+
+  - title: نظام إدارة البيئة
+    link: https://www.intercert.com/services/management-system-certifications/iso-14001-2015
+    image: https://www.intercert.com/upload_images/ISO-14001.png
+    image_alt: من قبل شركة انترسيرت ISO-14001:2015 شهادة
+
+    description:  
+      - text: تطوير وتطبيق الحلول المساعدة على تخفيف أثر أعمالنا على البيئة.
+      - text: مراعاة الضوابط البيئية

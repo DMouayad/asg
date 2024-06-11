@@ -1,0 +1,8 @@
+{{ if site.Params.preloader.enable }}
+{{ "<!-- preloader start -->" | safeHTML }}
+<div class="preloader" id="preloader">
+
+  <p class="pulsate-fwd">{{i18n "loading"}}</p>
+</div>
+{{ "<!-- preloader end -->" | safeHTML }}
+{{ end }}

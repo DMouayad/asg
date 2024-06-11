@@ -1,0 +1,257 @@
+.navigation-en {
+  .navbar-nav {
+    margin-left: auto;
+    margin-right: 0 !important;
+  }
+}
+
+.navbar-nav {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.navbar-nav {
+  .nav-dropdown {
+    padding: 0;
+    text-align: center;
+
+    &.dropdown-closed {
+      ul {
+        transform: translateY(20%);
+
+        @media(max-width:1000px) {
+          transform: translateY(0);
+          max-height: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .nav-dropdown ul {
+    list-style: none;
+    max-height: 400px;
+    overflow: hidden;
+    position: absolute;
+    -webkit-transition: max-height 0.3s ease;
+    transition: all 0.4s ease;
+    background-color: white;
+    margin-top: 10px;
+    box-shadow: 1px 6px 10px 1px rgba(0, 0, 0, .219);
+    padding: 20px;
+    transform: translateY(20px);
+
+    @media(max-width:1000px) {
+
+      position: relative;
+      box-shadow: none;
+      margin-bottom: 0;
+      padding: 0;
+
+      li {
+        padding: 10px 20px !important;
+      }
+    }
+  }
+
+  .nav-dropdown li {
+    padding: 10px 14px;
+
+    a {
+      font-size: 14px;
+      color: $body-text-color !important;
+    }
+
+    &:hover {
+      background-color: $card-color;
+    }
+
+    &.active {
+      background-color: $card-color;
+
+      a {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .dropdown-item {
+    text-align: initial;
+  }
+}
+
+.navbar-nav {
+  .nav-item {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+
+    .nav-link {
+      transition: all 0.4s ease;
+      margin: 0 13px;
+      padding-bottom: 4px;
+      font-size: 15px;
+      font-weight: 600;
+      color: $body-text-color;
+      text-transform: uppercase;
+    }
+
+    &.active a,
+    &:hover a {
+      color: $dark-green-color;
+    }
+  }
+}
+
+.navigation .nav-logo-img {
+  aspect-ratio: 9/10;
+  width: 54px;
+
+  @include mobile {
+    width: 42px;
+  }
+}
+
+.logo-border-green {
+  border-bottom: 3px solid $dark-green-color;
+}
+
+.logo-border-yellow {
+  border-bottom: 3px solid $orange-yellowish;
+}
+
+.logo-border-red {
+  border-bottom: 3px solid $red-primary;
+}
+
+.logo-border-black {
+  border-bottom: 3px solid #110f0f;
+}
+
+
+.navigation .nav-logo-text {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: fit-content;
+  color: $body-text-color;
+  padding-top: 4px;
+  line-height: 24px;
+  letter-spacing: -1px;
+
+  @include mobile {
+    max-width: 180px;
+    font-size: 22px;
+  }
+}
+
+.navigation {
+  transition: all 0.4s ease;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 10px 20px 0 rgba(50, 65, 141, 0.1);
+
+  &.transl {
+    background-color: #00000023;
+    box-shadow: none;
+
+    .nav-logo-text,
+    .nav-link,
+    .lang-switch,
+    .navbar-toggler {
+      color: white;
+    }
+
+    .navbar-toggler {
+      border-color: white;
+    }
+
+    .nav-item {
+
+      &.active a,
+      &:hover a {
+        color: $orange-yellowish;
+      }
+    }
+  }
+
+  // when navbar background is visible
+  @media (min-width:700px) {
+    padding: 0 40px;
+  }
+
+
+  @include mobile {
+    padding-left: 6px;
+    padding-right: 6px;
+    box-shadow: 0 2px 6px #1f1f1f5a;
+    box-shadow: 0 10px 20px 0 rgba(50, 65, 141, 0.1);
+
+  }
+
+  background-color: white;
+}
+
+.navigation {
+  .lang-switch {
+    padding: 0 8px;
+    font-size: 16px;
+    color: $body-text-color;
+
+    @media (max-width: 800px) {
+      padding: 10px 30px;
+      margin: 10px 0;
+    }
+
+    @media (max-width:370px) {
+      padding: 10px;
+    }
+  }
+}
+
+
+
+.navbar-toggler {
+  margin: 4px 0;
+  border-radius: 4px;
+  padding: 10px 14px;
+  color: $on-background-color;
+
+  @include mobile {
+    margin: 12px 8px;
+  }
+
+  @media (max-width:370px) {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width:1000px) {
+  .navbar-toggler {
+    margin: 10px 6px;
+  }
+}
+
+.ar-typography {
+  .lang-switch {
+    @media (max-width:440px) {
+      padding: 10px;
+    }
+  }
+}
+
+.ar-typography {
+  .nav-item .nav-link {
+    font-weight: 700;
+  }
+
+  .nav-logo-text {
+    font-size: 21px;
+
+    @media (max-width:440px) {
+      font-size: 18px;
+      max-width: 220px;
+    }
+  }
+}

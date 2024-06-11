@@ -1,0 +1,18 @@
+{{ $ImgWebp_lg := partial "image-processor.html" (dict "ImageSrc" .LgImageSrc "ImgParam"
+(or .LgWebpImgParam "webp q50"))}}
+{{ $ImgWebp_sm := partial "image-processor.html" (dict "ImageSrc" .MdImageSrc
+"ImgParam" (or .MdWebpImgParam "webp") )}}
+{{ $ImgPng_lg := partial "image-processor.html" (dict "ImageSrc" .LgImageSrc
+"ImgParam" (or .LgImgParam "png q50"))}}
+{{ $ImgPng_sm := partial "image-processor.html" (dict "ImageSrc" .MdImageSrc
+"ImgParam" (or .MdImgParam "png q50"))}}
+
+<picture>
+    <source srcset="{{ $ImgWebp_lg }}" media="(min-width: 801px)" type="image/webp" />
+    <source srcset="{{ $ImgWebp_sm }}" media="(max-width: 800px)" type="image/webp" />
+    <!-- fallback to png if browser doesnt support Webp-->
+    <source srcset="{{ $ImgPng_lg }}" media="(min-width: 801px)" type="image/png" />
+    <source srcset="{{ $ImgPng_sm }}" media="(max-width: 800px)" type="image/png" />
+    <!-- fallback to <img> if browser doesn't support <picture>-->
+    <img src="{{ $ImgPng_lg }}" alt="{{.ImageAlt}}">
+</picture>

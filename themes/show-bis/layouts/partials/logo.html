@@ -1,0 +1,17 @@
+<a href="{{`` | relLangURL}}">
+
+    <div class="d-flex flex-row align-items-center   ">
+        <picture>
+            {{ $logo_webp := partial "image-processor.html" (dict "ImageSrc" site.Params.logo "ImgParam"
+            "webp q90 resize 81x")}}
+            <source srcset="{{$logo_webp}}" type="image/webp">
+            <img class="nav-logo-img" width="58px" src="{{ $logo_webp }}" alt="{{ .Site.Title }}">
+        </picture>
+        <div class="nav-logo-text ">
+            <span class="">{{ i18n "areena" }}</span> <br>
+            <span class=" logo-border-green">{{ i18n "saudi" }} </span>
+            <span class=" logo-border-black">{{ i18n "GE" }}</span><span class=" logo-border-red">{{ i18n
+                "RM"}}</span><span class=" logo-border-yellow">{{ i18n "AN" }}</span>
+        </div>
+    </div>
+</a>

@@ -1,0 +1,69 @@
+services:
+- name: construction
+  icon: /icons/construction.svg
+  description:
+  subServices:
+    - name: أعمال الحفر والترحيل
+      image: /images/services/construction/excavation.jpg
+    - name: المسح والتخطيط
+      image: /images/services/construction/surveying.jpg
+    - name: الخرسانة المسلحة
+      image: /images/services/construction/reinforced-concrete.jpg
+    - name: الصب والقوالب
+      image: /images/services/construction/casting-molding-concrete.jpg
+
+
+- name: mep-engineering
+  icon: /icons/mep.svg
+  description:
+  subServices:
+    - name: أنطمة التدفئة والتبريد المركزية
+      image: /images/services/mep-engineering/hvac.jpg
+    - name: أنظمة إطفاء الحريق
+      image: /images/services/mep-engineering/mechanical.jpg
+    - name: أعمال السباكة
+      image: /images/services/mep-engineering/plumbing.jpg
+
+- name: flooring-systems
+  icon: /icons/flooring.svg
+  description:
+  subServices:
+    - name: أرضيات أيبوكسي
+      image: /images/services/flooring-systems/epoxy.jpg
+    - name: أرضيات فينيل ذاتي التسوية
+      image: /images/services/flooring-systems/vinyl.jpg
+    - name: أرضيات صناعية
+      image: /images/services/flooring-systems/1.jpg
+
+- name: insulation-works
+  icon: /icons/insulation.svg
+  description:
+  subServices:
+    - name: العزل الحراري
+      image: /images/services/insulation-works/insulation2.jpg
+    - name: العزل المائي
+      image: /images/services/insulation-works/insulation1.jpg
+
+- name: finishing-works
+  icon: /icons/finishing.svg
+  description:
+  subServices:
+    - name: أعمال ألواح الجبس
+      image: /images/services/finishing-works/gypsum-board.jpg
+    - name: الطلاء
+      image: /images/services/finishing-works/painting.jpg
+    - name: ديكورات داخلية
+      image: /images/services/finishing-works/decor.jpg
+    - name: تركيب أرضيات
+      image: /images/services/finishing-works/tiling2.jpg
+
+- name: concrete-joints-and-repairs
+  icon: /icons/concrete-repairs.svg
+  description:
+  subServices:
+    - name: فواصل التمدد
+      image: /images/services/concrete-works/expansion-joints.jpg
+    - name: إصلاحات شاملة
+      image: /images/services/concrete-works/concrete-repairs.jpg
+
+_template: contracting_services

@@ -1,0 +1,16 @@
+{{$style := ""}}
+{{if .styleFile}}
+{{ $fileName := .styleFile }}
+
+{{$cssURL := print "css/" $fileName ".css"}}
+{{$scssURL := print "scss/" $fileName ".scss"}}
+{{$css_options := dict "targetPath" $cssURL "enableSourceMap" (not hugo.IsProduction)}}
+{{$scssFile := resources.Get $scssURL}}
+{{if $scssFile}}
+{{ $style = $scssFile | resources.ExecuteAsTemplate "style.scss" . | toCSS $css_options }}
+{{ if hugo.IsProduction }}
+{{ $style = $style | minify | fingerprint "sha256"}}
+{{end}}
+{{end}}
+{{end}}
+{{return $style}}

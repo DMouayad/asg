@@ -1,0 +1,111 @@
+<section class="trade-services-section " id="supply-trade-services">
+  {{ $data := index site.Data site.Language.Lang }}
+  {{ with $data.home.supply_trade_services }}
+
+  <div class="h6 green-text text-center fw-semibold mb-4">{{i18n "our-services"}}</div>
+
+  <div class="section-title h1">{{.title}}</div>
+
+  <div class="h6 mx-3 mx-md-0 text-center mb-4">{{.description}}</div>
+
+
+  <div class="container">
+    <div class=" description">
+
+      {{range $index, $e := .subServices}}
+      <div class=" desc-card repeat-animation" style=" --delay:{{$index}};--anim-duration:0.3s"
+        animate-data="fadeInBottom">
+        <img src="{{ .icon | absURL}}" alt="">
+        <hr>
+        <div class="h5 title">{{.title}}</div>
+      </div>
+      {{end}}
+      <!-- <div id="tradeAndSupplyCarousel" class=" carousel carousel-fade slide" data-bs-interval="7000"
+        data-bs-theme="dark" data-bs-ride="carousel" data-bs-pause="false">
+        {{range $index, $el := .backgroundImages}}
+        {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" .link "ImgParam" "webp q70 resize 600x")}}
+        <div class="carousel-item {{if eq $index 0}} active {{end}}">
+          <div class="background" data-background-image="{{$imgWebp}}"></div>
+        </div>
+        {{end}}
+      </div> -->
+    </div>
+
+  </div>
+
+  {{ end }}
+
+</section>
+<section class="contracting-services-section " id="contracting-services">
+  <div animate-data="fadeInUp" class="h6 green-text  text-center fw-semibold  mb-4">{{i18n "our-services"}}</div>
+  <div animate-data="fadeInUp" class="section-title h1">
+    {{i18n "general-contracting"}}
+  </div>
+  {{$allServices := sort (where .Site.RegularPages "Type" "services")}}
+  <div class="contracting-services-list">
+    <div class="nav flex-row  flex-nowrap flex-xl-column nav-pills" id="contracting-services-tabs" role="tablist">
+      {{range $index, $el := $allServices}}
+      {{range (where $data.home.contracting_services.services "name" .File.BaseFileName)}}
+      <button animate-data="fadeInBottom" class="nav-link  {{if eq $index 0}} active {{end}}"
+        id="{{$el.Title}}-services-tab" data-bs-toggle="pill" data-bs-target="#pill-{{$index}}" type="button" role="tab"
+        aria-controls="pill-{{$index}}" aria-selected="{{if eq $index 0}} true {{else}} false {{end}}"><span><img
+            src="{{ .icon | absURL}}" alt="{{$el.Title}} service icon"></span> {{$el.Title}}</button>
+      {{end}}
+      {{end}}
+    </div>
+    <div class=" tab-content" id="contracting-services-tabsContent">
+      {{range $index, $el := $allServices}}
+      {{$carouselId := print .File "-carousel"}}
+      <div class=" tab-pane fade show {{if eq $index 0}} active {{end}}" id="pill-{{$index}}" role="tabpanel"
+        aria-labelledby="{{.Title}}-tab" tabindex="{{$index}}">
+        <div class=" service-tab">
+          {{$pageLinkLabel := print (i18n `learnMore`) " " .Title}}
+          <div class="header d-flex flex-row align-items-baseline justify-content-between ">
+
+            <div class="h2 title  mb-5 fw-semibold flex-fill">{{.Title}}
+            </div>
+            <a class="d-none d-md-block btn" target="_blank" aria-label="{{$pageLinkLabel}}"
+              href="{{.Permalink}}">{{i18n
+              "learn-about-service"}}</a>
+          </div>
+
+          {{ $data := index site.Data site.Language.Lang }}
+          <div class=" row sub-services justify-content-around mb-5 ">
+
+            {{range where $data.home.contracting_services.services "name" .File.BaseFileName}}
+            {{range $i, $el:= .subServices}}
+            {{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" .image "ImgParam" "webp resize 500x350")}}
+
+            <div animate-data="zoomIn" style="--delay:{{$i}}" class=" subService-card col-6 col-md-5  mb-md-3 mx-md-1"
+              data-background-image="{{$imgWebp}}">
+              <div class="h5 name">{{.name}}</div>
+            </div>
+            {{end}}
+            {{end}}
+            <a class="d-block d-md-none my-4 btn" target="_blank" aria-label="{{$pageLinkLabel}}"
+              href="{{.Permalink}}">{{i18n
+              "learn-about-service"}}</a>
+          </div>
+
+          {{ $projects := where .Site.RegularPages "Type" "projects"}}
+          {{ $serviceName := slice (print .File) }}
+          {{ $projects = where $projects "Params.services" "intersect" $serviceName}}
+          <div class="featured-projects">
+            <div animate-data="fadeInUp" class="title h5 mb-5 fw-semibold ">{{i18n "featured-projects"}}</div>
+
+            <div class="d-flex flex-row projects-row ">
+              {{range first 3 $projects}}
+              <div animate-data="fadeInUp" class="flex-fill mx-1">
+                {{.Render "summary"}}
+              </div>
+              {{end}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+<!-- Service end -->

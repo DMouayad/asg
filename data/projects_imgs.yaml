@@ -1,0 +1,90 @@
+list:
+- title: alfanar-building
+  thumbnailImage: /images/projects/alfanar-building/alfanar.png
+  images:
+  - /images/projects/alfanar-building/img (1).jpg
+  - /images/projects/alfanar-building/img (2).jpg
+  - /images/projects/alfanar-building/img (3).jpg
+  - /images/projects/alfanar-building/img (4).jpg
+  - /images/projects/alfanar-building/img (5).jpg
+  - /images/projects/alfanar-building/img (6).jpg
+
+- title: alfaisaliya-tower
+  thumbnailImage: /images/projects/alfaisaliya-tower/01.jpg
+  images:
+
+- title: al-jazeera-factory
+  thumbnailImage: /images/projects/al-jazeera-factory/alfanar.png
+  images:
+  - /images/projects/al-jazeera-factory/img (1).jpg
+  - /images/projects/al-jazeera-factory/img (2).jpg
+  - /images/projects/al-jazeera-factory/img (3).jpg
+  - /images/projects/al-jazeera-factory/img (4).jpg
+  - /images/projects/al-jazeera-factory/img (5).jpg
+
+- title: riyadh-park-mall
+  thumbnailImage: /images/projects/riyadh-park-project/1.jpg
+  images:
+  - /images/projects/riyadh-park-project/img (8).jpg
+  - /images/projects/riyadh-park-project/img (1).jpg
+  - /images/projects/riyadh-park-project/img (2).jpg
+  - /images/projects/riyadh-park-project/img (3).jpg
+  - /images/projects/riyadh-park-project/img (4).jpg
+  - /images/projects/riyadh-park-project/img (5).jpg
+  - /images/projects/riyadh-park-project/img (6).jpg
+  - /images/projects/riyadh-park-project/img (7).jpg
+
+- title: alkabbani-factory
+  thumbnailImage: /images/projects/al-kabbani-factory/1.jpg
+  images:
+  - /images/projects/al-kabbani-factory/img (1).jpg
+  - /images/projects/al-kabbani-factory/img (2).jpg
+  - /images/projects/al-kabbani-factory/img (3).jpg
+  - /images/projects/al-kabbani-factory/img (4).jpg
+
+- title: king-khalid-airport
+  thumbnailImage: /images/projects/king-khalid-airport/01.jpg
+  images:
+  - /images/projects/king-khalid-airport/01.jpg
+  - /images/projects/king-khalid-airport/02.jpg
+  - /images/projects/king-khalid-airport/03.jpg
+  - /images/projects/king-khalid-airport/04.jpg
+  - /images/projects/king-khalid-airport/05.jpg
+  - /images/projects/king-khalid-airport/06.jpg
+  - /images/projects/king-khalid-airport/07.jpg
+  - /images/projects/king-khalid-airport/08.png
+
+- title: dar-al-uloom
+  thumbnailImage: /images/projects/dar-al-uloom/01.png
+  images:
+  - /images/projects/dar-al-uloom/02.png
+
+- title: national-gaurd-parking-lot
+  thumbnailImage: /images/projects/national-gaurd-parking/img (0).jpg
+  images:
+  - /images/projects/national-gaurd-parking/img (1).jpg
+  - /images/projects/national-gaurd-parking/img (2).jpg
+  - /images/projects/national-gaurd-parking/img (3).jpg
+  - /images/projects/national-gaurd-parking/img (4).jpg
+  - /images/projects/national-gaurd-parking/img (5).jpg
+
+- title: saudi-journalists-association-building
+  thumbnailImage: /images/projects/saudi-journalists-association/img (1).png
+  images:
+  - /images/projects/saudi-journalists-association/img (1).jpg
+  - /images/projects/saudi-journalists-association/img (2).jpg
+  - /images/projects/saudi-journalists-association/img (3).jpg
+  - /images/projects/saudi-journalists-association/img (4).jpg
+  - /images/projects/saudi-journalists-association/img (5).jpg
+  - /images/projects/saudi-journalists-association/img (6).jpg
+  - /images/projects/saudi-journalists-association/img (7).jpg
+  - /images/projects/saudi-journalists-association/img (9).jpg
+  - /images/projects/saudi-journalists-association/img (10).jpg
+
+- title: vocational-training-center
+  thumbnailImage: /images/projects/vocational-training-center/img (0).jpg
+  images:
+  - /images/projects/vocational-training-center/img (1).jpg
+  - /images/projects/vocational-training-center/img (2).jpg
+  - /images/projects/vocational-training-center/img (3).jpg
+ 

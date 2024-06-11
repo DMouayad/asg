@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+{{ $imgURL := or .Params.bannerImage "images/bg2.jpg"}}
+{{ $imgWebp := partial "image-processor.html" (dict "ImageSrc" $imgURL "ImgParam" "webp fit 1920x1280")}}
+<section class="service-page">
+    <div class="page-bg" data-background-image="{{$imgWebp}}">
+        <div class="d-flex flex-column align-items-center ">
+            <div class="h1 section-title text-uppercase text-center  animate__animated animate__fadeInDown">{{
+                .Title }}</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center  ">
+            <div class="col-md-6 col-10 py-4  py-md-5">
+                {{.Content}}
+            </div>
+        </div>
+
+    </div>
+    <div class="other-services-list d-flex flex-row align-items-center">
+        <div class="flex-grow-1 h6 mb-0 fw-semibold title ">
+            {{i18n "other-services"}}
+        </div>
+        {{$allServices := sort (where .Site.RegularPages "Type" "services")}}
+        {{ $allServices = where $allServices "Params.title" "ne" .Title}}
+
+        {{ range $allServices}}
+        <div class="service-li flex-grow-1">
+            <a href="{{.RelPermalink}}">{{.Title}}</a>
+        </div>
+        {{end}}
+    </div>
+</section>
+<section class="related-projects-sec">
+    {{ $projects := where .Site.RegularPages "Type" "projects"}}
+    {{ $serviceName := slice (print .File) }}
+    {{ $projects = where $projects "Params.services" "intersect" $serviceName}}
+
+    {{partial "projects-slider.html" (dict "projects" $projects "sliderTitle" (i18n "some-projects"))
+    .}}
+</section>
+
+{{ end }}
