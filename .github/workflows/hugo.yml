@@ -57,7 +57,7 @@ jobs:
           hugo \
             --minify \
             --gc \
-            --log-level info
+            --logLevel info \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Build TinaCMS
         env:
