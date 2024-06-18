@@ -29,7 +29,6 @@ defaults:
 jobs:
   # Build job
   build:
-    basePath: asg
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.124.1
